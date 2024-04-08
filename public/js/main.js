@@ -963,8 +963,9 @@ function windowLoadInit() {
 
 			$currentSlider.flexslider({
 				animation: "fade",
-				pauseOnHover: true, 
+				pauseOnHover: false, 
 				useCSS: true,
+				auto: true,
 				controlNav: dots,   
 				directionNav: nav,
 				prevText: "",

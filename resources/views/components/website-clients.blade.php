@@ -8,14 +8,14 @@
                 <div class="divider-40 divider-xl-20"></div>
                 <p class="text-center color-darkgrey fs-20 fw-500">
                     <span>
-                        Conoce a algunos de nuestros clientes satisfechos que han confiado en Pellegrino's Comedores Industriales para sus necesidades de alimentación industrial.
+                        Conoce a algunos de nuestros clientes satisfechos que han confiado en Pellegrino's Comedores  Industriales para sus necesidades corporativas. 
                     </span>
                 </p>
                 <div class="divider-40 divider-xl-20"></div>
                 <div class="d-flex justify-content-center justify-content-lg-center social-media-icons clients">
-                    <a href="#"><img src="img/clientes/tsc.png" alt="img"></a>
-                    <a href="#"><img src="img/clientes/monster-digital.png" alt="img"></a>
-                    <a href="#"><img src="img/clientes/tecma.png" alt="img"></a>
+                    <a href="#" class="client1"><img src="img/clientes/tsc.png" alt="img"></a>
+                    <a href="#" class="client2"><img src="img/clientes/monster-digital.png" alt="img"></a>
+                    <a href="#" class="client3"><img src="img/clientes/tecma.png" alt="img"></a>
                 </div>
             </div>
         </div>

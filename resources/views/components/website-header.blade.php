@@ -10,16 +10,19 @@
                                 <a href="#home">Inicio</a>
                             </li>
                             <li>
-                                <a href="#about">Pellegrino´s</a>
+                                <a href="#about">Nosotros</a>
                             </li>
                             <li>
-                                <a href="#services">Nuestros servicios</a>
+                                <a href="#services">Servicios</a>
                             </li>
                             <li>
                                 <a href="#gallery">Galería</a>
                             </li>
                             <li>
-                                <a href="#clients">Nuestros clientes</a>
+                                <a href="#clients">Clientes</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contacto</a>
                             </li>
                         </ul>
                     </nav>
@@ -31,9 +34,6 @@
                     </a>
                     <a href="#">
                         <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-tiktok"></i>
                     </a>
                     <a href="#">
                         <i class="fab fa-whatsapp"></i>

@@ -11,7 +11,7 @@
                     <div class="divider-40 divider-lg-25 divider-xl-50"></div>
                     <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
                         <span>
-                            Conoce a Pellegrino's Comedores Industriales a través de nuestra galería de imágenes. Desde deliciosos platos preparados con ingredientes frescos hasta la satisfacción de nuestros clientes en eventos corporativos.
+                            Somos un socio confiable para las empresas, contribuyendo al bienestar  y la productividad de sus empleados mediante la entrega de comidas nutritivas, seguras y  sabrosas. 
                         </span>
                     </p>
                     <div class="divider-40 divider-lg-25 divider-xl-50"></div>

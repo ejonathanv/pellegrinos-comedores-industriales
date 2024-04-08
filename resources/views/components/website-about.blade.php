@@ -8,15 +8,15 @@
                 </h3>
                 <div class="divider-40 divider-xl-50"></div>
                 <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
-                    En Pellegrino's Comedores Industriales, nos comprometemos a proporcionar soluciones alimenticias de alta calidad y convenientes para satisfacer las necesidades específicas de nuestros clientes industriales en Tijuana.
+                    En Pellegrino's Comedores Industriales, nos comprometemos a  proporcionar soluciones alimenticias de alta calidad y convenientes para satisfacer las  necesidades específicas de nuestros clientes industriales en Tijuana. 
                 </p>
                 <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
-                    Nos esforzamos por ofrecer un servicio excepcional y una experiencia culinaria confiable y segura en todo momento.
+                    Proporcionamos a nuestros clientes la mejor experiencia culinaria, ofreciendo alimentos  frescos, nutritivos y deliciosos en un entorno seguro y acogedor. Nos comprometemos a  cumplir con los más altos estándares de calidad, servicio y responsabilidad en cada comida  que servimos. 
                 </p>
                 <div class="divider-40 divider-xl-50"></div>
-                <div class="several-buttons">
-                    <a href="./pricing.html" class="btn btn-maincolor btn-medium">Nuestros servicios</a>
-                </div>
+                <h5 style="line-height: 45px" class="color-main">
+                    ¡Descubre por qué somos mucho más que un simple comedor industrial! 
+                </h5>
                 <div class="divider-60 divider-lg-0"></div>
             </div>
             <div class="col-lg-6 mr--100-xl-with-scale">
@@ -40,7 +40,7 @@
                 </h3>
                 <div class="divider-40 divider-xl-50"></div>
                 <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
-                    <span>Nos visualizamos como el principal proveedor de servicios de alimentación industrial en la región de Tijuana, siendo reconocidos por nuestra excelencia en calidad, servicio al cliente y compromiso con la satisfacción del cliente</span>
+                    <span>Desde platillos caseros y saludables hasta un ambiente acogedor y un servicio  profesional, nos esforzamos para superar tus expectativas con sabores auténticos, y  atención a cada detalle.</span>
                 </p>
                 <div class="divider-40 divider-xl-50"></div>
                 <div class="row">
@@ -50,7 +50,7 @@
                                 <img src="img/icons/dish_857681.png" style="width: 50px; height: auto;">
                             </div>
                             <h3 class="special-heading text-uppercase counter-wrap color-main mt-2 mb-3">
-                                <span class="counter" data-from="0" data-to="4534" data-speed="1500">0</span>
+                                <span class="counter" data-from="0" data-to="30000" data-speed="1500">0</span>
                             </h3>
                             <p>
                                 Platos servidos aproximadamente al mes
@@ -64,26 +64,13 @@
                                 <img src="img/icons/cooking_11941846.png" style="width: 50px; height: auto;">
                             </div>
                             <h3 class="special-heading text-uppercase counter-wrap color-main mt-2 mb-3">
-                                <span class="counter" data-from="0" data-to="14" data-speed="1500">0</span>
+                                <span class="counter" data-from="0" data-to="2" data-speed="1500">0</span>
                             </h3>
                             <p>
                                 Años de experiencia en la industria alimenticia
                             </p>
                         </div>
                         <div class="divider-30 divider-lg-0"></div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="icon-box text-center text-md-left">
-                            <div class="icon-styled color-darkgrey fs-50">
-                                <img src="img/icons/rating_12903459.png" style="width: 50px; height: auto;">
-                            </div>
-                            <h3 class="special-heading text-uppercase counter-wrap color-main mt-2 mb-3">
-                                <span class="counter" data-from="0" data-to="34" data-speed="1500">0</span>
-                            </h3>
-                            <p>
-                                Clientes satisfechos con nuestros servicios
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>

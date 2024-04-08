@@ -5,5 +5,6 @@
 	<x-website-services />
 	<x-website-gallery />
 	<x-website-clients />
+	<x-website-contact />
 
 </x-website-layout>

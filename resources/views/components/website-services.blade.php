@@ -10,7 +10,7 @@
                         </h3>
                         <p class="text-center text-lg-left color-darkgrey fw-500">
                             <span>
-                                Ofrecemos servicios culinarios excepcionales, desde catering personalizado hasta comedores corporativos en Tijuana, mejorando la experiencia laboral y los eventos empresariales.
+                                Mejoramos la experiencia laboral al ofrecer  servicios culinarios excepcionales, comenzando desde comedores corporativos y  abarcando el diseño de cocinas industriales.
                             </span>
                         </p>
                         <div class="divider-35"></div>
@@ -22,7 +22,9 @@
                 </div>
             </div>
             <div class="col-lg-6 col-xl-9">
-                <div class="quote-carousel owl-carousel" data-margin="50" data-responsive-xl="4" data-responsive-ml="3" data-responsive-lg="2" data-responsive-md="1" data-responsive-sm="2" data-responsive-xs="1" data-dots="false" data-loop="true" data-autoplay="true">
+                <div class="quote-carousel owl-carousel" data-margin="60" data-responsive-xl="2" data-responsive-ml="2" data-responsive-lg="2" data-responsive-md="1" data-responsive-sm="2" data-responsive-xs="1" data-dots="false" data-loop="true" data-autoplay="true">
+                    {{--
+                    <!-- Catering para empresas -->
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
                             <img src="images/img_4.jpg" alt="img">
@@ -41,6 +43,9 @@
                             </div>
                         </div>
                     </div>
+                    --}}
+
+                    <!-- Diseño de cocinas -->
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
                             <img src="images/img_5.jpg" alt="img">
@@ -59,6 +64,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Comidas para empleados -->
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
                             <img src="images/img_1.jpg" alt="img">
@@ -69,7 +75,7 @@
                         <div class="item-content">
                             <div class="item-content-wrap">
                                 <h5 class="mt-1">
-                                    Almuerzo de empleados
+                                    Comidas para empleados
                                 </h5>
                                 <p>
                                     Proporcionar almuerzos saludables y frescos en el lugar de trabajo, con opciones preparadas o estaciones de comida para que los empleados elijan.
@@ -77,6 +83,8 @@
                             </div>
                         </div>
                     </div>
+                    {{--
+                    <!-- Vending saludable -->
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
                             <img src="images/img_6.jpg" alt="img">
@@ -95,6 +103,7 @@
                             </div>
                         </div>
                     </div>
+                    --}}
                 </div>
             </div>
         </div>
