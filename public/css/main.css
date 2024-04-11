@@ -17658,10 +17658,12 @@ body.active-side-header.slide-right .page_header_side {
 @media (max-width: 767px) {
 	.page_slider.slider-1 .intro_before_featured_word {
 		font-size: 20px;
+    	line-height: 30px;
 	}
 
 	.page_slider.slider-1 .intro_featured_word {
-		font-size: 60px;
+		font-size: 54px;
+    	line-height: 54px;
 	}
 
 	.page_slider.slider-1 .intro_after_featured_word {

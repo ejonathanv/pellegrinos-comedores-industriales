@@ -11,11 +11,6 @@
                 <div class="widget widget_text">
                     <h3 class="widget-title">Contáctanos</h3>
                     <p>
-                        <span class="small-text color-darkgrey">Dirección:</span> <br>
-                        22020 Tijuana, Baja California, México
-                    </p>
-                    <div class="divider-20"></div>
-                    <p>
                         11202, Camino Vecinal , Colonia Rancho, El Refugio, 22253  Tijuana, B.C. 
                     </p>
                     <div class="d-flex justify-content-center justify-content-lg-start social-media-icons">
@@ -25,7 +20,7 @@
                         <a href="#">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#">
+                        <a href="https://wa.me/526643756259" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>

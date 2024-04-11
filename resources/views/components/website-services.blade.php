@@ -49,9 +49,6 @@
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
                             <img src="images/img_5.jpg" alt="img">
-                            <div class="media-links">
-                                <a class="abs-link" title="" href="service-single.html"></a>
-                            </div>
                         </div>
                         <div class="item-content">
                             <div class="item-content-wrap">
@@ -68,9 +65,6 @@
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
                             <img src="images/img_1.jpg" alt="img">
-                            <div class="media-links">
-                                <a class="abs-link" title="" href="service-single.html"></a>
-                            </div>
                         </div>
                         <div class="item-content">
                             <div class="item-content-wrap">
@@ -78,7 +72,7 @@
                                     Comidas para empleados
                                 </h5>
                                 <p>
-                                    Proporcionar almuerzos saludables y frescos en el lugar de trabajo, con opciones preparadas o estaciones de comida para que los empleados elijan.
+                                    Proporcionamos comidas saludables y frescas en el lugar de trabajo, con opciones preparadas en el momento y menús ejecutivos personalizados.
                                 </p>
                             </div>
                         </div>

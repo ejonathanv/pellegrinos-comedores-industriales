@@ -23,7 +23,7 @@
                 <div class="post_format-post-format-video" style="position: relative">
                     <div class="embed-responsive embed-responsive-3by2">
                         <video autoplay="" loop="" muted="" playsinline="" class="embed-responsive-item" style="position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover;">
-                            <source src="img/portadas/1109981_Unknown_Pan_Toss_1280x720.mp4" type="video/mp4">
+                            <source src="img/portadas/6037309_Chef_Food_Kitchen_1920x1080.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
