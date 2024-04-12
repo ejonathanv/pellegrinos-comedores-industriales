@@ -6,11 +6,13 @@
                 <div>
                     <div class="content-center">
                         <h3 class="text-center text-lg-left mt-0 mb-2 color-darkgrey">
-                            <span>Tu éxito es nuestro plato principal, servicio tras servicio.</span>
+                            <span>
+                                {{ __('website.services.title') }}
+                            </span>
                         </h3>
                         <p class="text-center text-lg-left color-darkgrey fw-500">
                             <span>
-                                Mejoramos la experiencia laboral al ofrecer  servicios culinarios excepcionales, comenzando desde comedores corporativos y  abarcando el diseño de cocinas industriales.
+                                {{ __('website.services.description') }}
                             </span>
                         </p>
                         <div class="divider-35"></div>
@@ -53,10 +55,10 @@
                         <div class="item-content">
                             <div class="item-content-wrap">
                                 <h5 class="mt-1">
-                                    Diseño de cocinas
+                                    {{ __('website.services.serviceOne.title') }}
                                 </h5>
                                 <p>
-                                    Diseñamos cocinas industriales y comedores corporativos, con un enfoque en la eficiencia, la seguridad y la higiene.
+                                    {{ __('website.services.serviceOne.description') }}
                                 </p>
                             </div>
                         </div>
@@ -69,10 +71,10 @@
                         <div class="item-content">
                             <div class="item-content-wrap">
                                 <h5 class="mt-1">
-                                    Comidas para empleados
+                                    {{ __('website.services.serviceTwo.title') }}
                                 </h5>
                                 <p>
-                                    Proporcionamos comidas saludables y frescas en el lugar de trabajo, con opciones preparadas en el momento y menús ejecutivos personalizados.
+                                    {{ __('website.services.serviceTwo.description') }}
                                 </p>
                             </div>
                         </div>

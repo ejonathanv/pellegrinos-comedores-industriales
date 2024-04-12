@@ -6,12 +6,14 @@
                 <div class="content-center">
                     <div class="divider-lg-25 divider-xl-50"></div>
                     <h3 class="text-center text-md-left mt-0 mb-2 special-heading color-darkgrey">
-                        <span>Comida para Empleados</span>
+                        <span>
+                            {{ __('website.galleries.one.title') }}
+                        </span>
                     </h3>
                     <div class="divider-40 divider-lg-25 divider-xl-50"></div>
                     <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
                         <span>
-                            Somos un socio confiable para las empresas, contribuyendo al bienestar  y la productividad de sus empleados mediante la entrega de comidas nutritivas, seguras y  sabrosas. 
+                            {{ __('website.galleries.one.description') }}
                         </span>
                     </p>
                     <div class="divider-40 divider-lg-25 divider-xl-50"></div>

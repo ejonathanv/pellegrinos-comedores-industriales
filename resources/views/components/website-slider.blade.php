@@ -15,7 +15,7 @@
                                             <img src="img/pellegrinos_comedores_industriales_logo_blanco.svg" alt="img" style="width: 500px; height: auto; display: inline-block !important; margin-bottom: 3rem">
 
                                             <h4>
-                                                Tu aliado culinario en el corazón industrial de Tijuana
+                                                {{ __('website.slider.one.description') }}
                                             </h4>
                                         </div>
                                     </div>
@@ -37,10 +37,10 @@
                                         <div class="divider-90"></div>
                                         <div class="d-inline-block">
                                             <h3 class="intro_before_featured_word" style="color: #ffffff">
-                                                Productividad y bienestar de tu equipo
+                                                {{ __('website.slider.two.title') }}
                                             </h3>
                                             <h2 class="intro_featured_word" style="color: #ffffff">
-                                                Comidas para Empleados
+                                                {{ __('website.slider.two.description') }}
                                             </h2>
                                         </div>
                                     </div>
@@ -62,10 +62,10 @@
                                         <div class="divider-90"></div>
                                         <div class="d-inline-block">
                                             <h3 class="intro_before_featured_word" style="color: #ffffff">
-                                                Innovación en cada detalle
+                                                {{ __('website.slider.three.title') }}
                                             </h3>
                                             <h2 class="intro_featured_word" style="color: #ffffff">
-                                                Diseño de cocinas industriales a medida
+                                                {{ __('website.slider.three.description') }}
                                             </h2>
                                         </div>
                                     </div>

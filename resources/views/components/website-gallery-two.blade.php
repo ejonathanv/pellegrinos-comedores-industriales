@@ -6,12 +6,14 @@
                 <div class="content-center">
                     <div class="divider-lg-25 divider-xl-50"></div>
                     <h3 class="text-center text-md-left mt-0 mb-2 special-heading color-darkgrey">
-                        <span>Diseño de Cocinas</span>
+                        <span>
+                            {{ __('website.galleries.two.title') }}
+                        </span>
                     </h3>
                     <div class="divider-40 divider-lg-25 divider-xl-50"></div>
                     <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
                         <span>
-                            Nos aseguramos de que cada cocina que diseñamos sea funcional, segura y  eficiente, para poder ofrecer la mejor experiencia culinaria.
+                            {{ __('website.galleries.two.description') }}
                         </span>
                     </p>
                     <div class="divider-40 divider-lg-25 divider-xl-50"></div>

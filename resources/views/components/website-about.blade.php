@@ -4,18 +4,18 @@
         <div class="row">
             <div class="col-lg-6">
                 <h3 class="text-center text-md-left mt-0 mb-2 special-heading color-darkgrey">
-                    <span>Pellegrino's <br> Comedores Industriales</span>
+                    <span>Pellegrino's <br> {{ __('website.about.title') }}</span>
                 </h3>
                 <div class="divider-40 divider-xl-50"></div>
                 <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
-                    En Pellegrino's Comedores Industriales, nos comprometemos a  proporcionar soluciones alimenticias de alta calidad y convenientes para satisfacer las  necesidades específicas de nuestros clientes industriales en Tijuana. 
+                    {{ __('website.about.paragraphOne') }}
                 </p>
                 <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
-                    Proporcionamos a nuestros clientes la mejor experiencia culinaria, ofreciendo alimentos  frescos, nutritivos y deliciosos en un entorno seguro y acogedor. Nos comprometemos a  cumplir con los más altos estándares de calidad, servicio y responsabilidad en cada comida  que servimos. 
+                    {{ __('website.about.paragraphTwo') }} 
                 </p>
                 <div class="divider-40 divider-xl-50"></div>
                 <h5 style="line-height: 45px" class="color-main">
-                    ¡Descubre por qué somos mucho más que un simple comedor industrial! 
+                    {{ __('website.about.slogan') }} 
                 </h5>
                 <div class="divider-60 divider-lg-0"></div>
             </div>
@@ -36,11 +36,15 @@
         <div class="row">
             <div class="col-lg-7">
                 <h3 class="text-center text-md-left mt-0 mb-2 special-heading color-darkgrey">
-                    <span>Donde la calidad industrial se encuentra con la excelencia culinaria</span>
+                    <span>
+                        {{ __('website.about.sloganTwo') }}
+                    </span>
                 </h3>
                 <div class="divider-40 divider-xl-50"></div>
                 <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
-                    <span>Desde platillos caseros y saludables hasta un ambiente acogedor y un servicio  profesional, nos esforzamos para superar tus expectativas con sabores auténticos, y  atención a cada detalle.</span>
+                    <span>
+                        {{ __('website.about.paragraphThree') }}
+                    </span>
                 </p>
                 <div class="divider-40 divider-xl-50"></div>
                 <div class="row">
@@ -53,7 +57,7 @@
                                 <span class="counter" data-from="0" data-to="30000" data-speed="1500">0</span>
                             </h3>
                             <p>
-                                Platos servidos aproximadamente al mes
+                                {{ __('website.about.stats.one') }}
                             </p>
                         </div>
                         <div class="divider-30 divider-lg-0"></div>
@@ -67,7 +71,7 @@
                                 <span class="counter" data-from="0" data-to="2" data-speed="1500">0</span>
                             </h3>
                             <p>
-                                Años de experiencia en la industria alimenticia
+                                {{ __('website.about.stats.two') }}
                             </p>
                         </div>
                         <div class="divider-30 divider-lg-0"></div>

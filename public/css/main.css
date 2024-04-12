@@ -17396,8 +17396,12 @@ body.active-side-header.slide-right .page_header_side {
 }
 
 .page_slider .flex-control-nav li a::before {
-	color: #fff;
-	content: ".0" counter(li);
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #FFFFFF;
 	counter-increment: li;
 	font-size: 32px;
 	left: 2px;
@@ -17405,6 +17409,10 @@ body.active-side-header.slide-right .page_header_side {
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	transition: all .3s ease-in-out;
+}
+
+.page_slider .flex-control-nav li a.flex-active::before {
+	background-color: #38b5fe;
 }
 
 @media screen and (max-width: 768px){

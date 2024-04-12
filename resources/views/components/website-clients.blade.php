@@ -3,12 +3,14 @@
         <div class="row">
             <div class="col-lg-9 text-center text-lg-left animate" data-animation="fadeInUp" style="margin-left: auto; margin-right: auto;">
                 <h3 class="text-center mt-0 mb-2 special-heading color-darkgrey">
-                    <span>Nuestros clientes</span>
+                    <span>
+                        {{ __('website.clients.title') }}
+                    </span>
                 </h3>
                 <div class="divider-40 divider-xl-20"></div>
                 <p class="text-center color-darkgrey fs-20 fw-500">
                     <span>
-                        Conoce a algunos de nuestros clientes satisfechos que han confiado en Pellegrino's Comedores  Industriales para sus necesidades corporativas. 
+                        {{ __('website.clients.description') }}
                     </span>
                 </p>
                 <div class="divider-40 divider-xl-20"></div>

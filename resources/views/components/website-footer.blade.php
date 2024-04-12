@@ -9,7 +9,9 @@
             </div>
             <div class="col-xl-4 col-lg-6 text-center text-lg-left animate" data-animation="fadeInUp">
                 <div class="widget widget_text">
-                    <h3 class="widget-title">Contáctanos</h3>
+                    <h3 class="widget-title">
+                        {{ __('website.contact.address') }}
+                    </h3>
                     <p>
                         11202, Camino Vecinal , Colonia Rancho, El Refugio, 22253  Tijuana, B.C. 
                     </p>
@@ -34,7 +36,7 @@
         <div class="row align-items-center">
             <div class="col-md-12 text-center">
                 <p>© <span class="copyright_year">
-                    2022 - {{ date('Y') }}</span> {{ env('APP_NAME') }}, Derechos Reservados
+                    2022 - {{ date('Y') }}</span> {{ env('APP_NAME') }}, {{ __('website.footer.rights') }}
                 </p>
             </div>
         </div>

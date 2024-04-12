@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 	<title>{{ env('APP_NAME') }}</title>
 	<meta charset="utf-8">
@@ -33,4 +34,5 @@
 	</div>
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
-</body></html>
+</body>
+</html>
