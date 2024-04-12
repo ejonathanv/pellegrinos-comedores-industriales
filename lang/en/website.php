@@ -52,7 +52,7 @@ return [
 
     'galleries' => [
         'one' => [
-            'title' => 'Employee Food',
+            'title' => 'Employee Meals',
             'description' => 'We are a reliable partner for companies, contributing to the well-being and productivity of their employees by delivering nutritious, safe, and tasty meals.'
         ],
         'two' => [
