@@ -2049,8 +2049,8 @@ progressbar*/
 
 .owl-carousel .owl-dots .owl-dot span {
 	-webkit-backface-visibility: visible;
-	background-color: #fff;
-	border: 1px solid #fff;
+	background-color: #222;
+	border: 1px solid #222;
 	border-radius: 50%;
 	display: block;
 	height: 8px;

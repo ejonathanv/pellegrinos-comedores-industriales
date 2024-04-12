@@ -66,13 +66,13 @@
                 </div>
 
                 <div class="col-xl-3 col-lg-3 text-right d-lg-block social-media-icons">
-                    <a href="#">
+                    <a href="#" style="color: #6382c4">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#">
+                    <a href="#" style="color: #E66490">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#">
+                    <a href="#" style="color: #25d366">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>

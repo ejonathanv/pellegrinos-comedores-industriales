@@ -1,6 +1,7 @@
 <!-- Galeria -->
-<section id="gallery" class="ls ds s-pt-90 s-pb-80 s-pt-xl-160 s-pb-xl-150 c-gutter-10">
+<section id="gallery" class="ls ms s-pt-90 s-pb-80 s-pt-xl-160 s-pb-xl-150 c-gutter-10">
     <div class="container">
+        {{--
         <div class="row">
             <div class="col-lg-6">
                 <div class="content-center">
@@ -52,6 +53,45 @@
                     </div>
                 </div>
             </div>
+        </div>
+        --}}
+
+        <h3 class="text-center text-md-left mt-0 mb-2 special-heading color-darkgrey">
+            <span>
+                {{ __('website.galleries.two.title') }}
+            </span>
+        </h3>
+        <div class="divider-40 divider-lg-25 divider-xl-50"></div>
+        <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
+            <span>
+                {{ __('website.galleries.two.description') }}
+            </span>
+        </p>
+        <div class="divider-40 divider-lg-25 divider-xl-50"></div>
+
+        <!-- Vamos a crear un carrusel con owl para mostrar las imágenes de la galería. -->
+        <div class="owl-carousel" data-margin="60" data-responsive-xl="1" data-responsive-ml="1" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1" data-dots="true" data-loop="true" data-autoplay="true">
+            
+            <div>
+                <img src="{{ asset('img/galeria/cocinas/slides/slide1.jpg') }}" alt="Diseño de cocinas">
+            </div>
+
+            <div>
+                <img src="{{ asset('img/galeria/cocinas/slides/slide2.jpg') }}" alt="Diseño de cocinas">
+            </div>
+
+            <div>
+                <img src="{{ asset('img/galeria/cocinas/slides/slide3.jpg') }}" alt="Diseño de cocinas">
+            </div>
+
+            <div>
+                <img src="{{ asset('img/galeria/cocinas/slides/slide4.jpg') }}" alt="Diseño de cocinas">
+            </div>
+
+            <div>
+                <img src="{{ asset('img/galeria/cocinas/slides/slide5.jpg') }}" alt="Diseño de cocinas">
+            </div>
+
         </div>
     </div>
 </section>
