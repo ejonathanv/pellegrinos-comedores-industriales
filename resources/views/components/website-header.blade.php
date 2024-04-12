@@ -2,7 +2,12 @@
     <header class="page_header ds ms s-overlay">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-5 col-1">
+                <div class="col-xl-2 col-lg-3 col-1">
+                    <a href="./" class="logo">
+                        <img src="{{ asset('img/pellegrinos_comedores_industriales_logo_blanco.svg') }}" alt="img">
+                    </a>
+                </div>
+                <div class="col-xl-6 col-lg-5 col-4">
                     <!-- main nav start -->
                     <nav class="top-nav">
                         <ul class="nav sf-menu">
@@ -36,36 +41,38 @@
                                     {{ __('website.nav.contact') }}
                                 </a>
                             </li>
-                            <li class="d-lg-none d-flex justify-content-start align-items-center">
-                                <a href="{{ route('lang', 'es') }}">
-                                    Español
-                                </a>
-                                <span class="mx-2">
-                                    |
-                                </span>
-                                <a href="{{ route('lang', 'en') }}">
-                                    English
-                                </a>
-                            </li>
                         </ul>
                     </nav>
                     <!-- eof main nav -->
                 </div>
 
                 <!-- Aqui vamos a agregar un boton para cambiar el idioma del sitio -->
-                <div class="col-xl-3 col-lg-4 col-11 text-right d-lg-block d-none">
-                    <a href="{{ route('lang', 'es') }}">
-                        Español
-                    </a>
-                    <span class="mx-2">
-                        |
-                    </span>
-                    <a href="{{ route('lang', 'en') }}">
-                        English
-                    </a>
+                <div class="col-xl-2 col-lg-4 col-4 text-right">
+                    @if(session()->get('locale') && session()->get('locale') == 'es')
+                        <a href="{{ route('lang', 'en') }}">
+                            <i class="fa fa-globe"></i>
+                            <span class="d-none d-lg-inline">
+                                English
+                            </span>
+                        </a>
+                    @elseif(session()->get('locale') && session()->get('locale') == 'en')
+                        <a href="{{ route('lang', 'es') }}">
+                            <i class="fa fa-globe"></i>
+                            <span class="d-none d-lg-inline">
+                                Español
+                            </span>
+                        </a>
+                    @else
+                        <a href="{{ route('lang', 'en') }}">
+                            <i class="fa fa-globe"></i>
+                            <span class="d-none d-lg-inline">
+                                English
+                            </span>
+                        </a>
+                    @endif
                 </div>
 
-                <div class="col-xl-3 col-lg-3 text-right d-lg-block social-media-icons">
+                <div class="col-xl-2 col-lg-3 col-4 text-right d-none d-lg-block social-media-icons">
                     <a href="#" style="color: #6382c4">
                         <i class="fab fa-facebook-f"></i>
                     </a>
@@ -76,6 +83,7 @@
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
+
                 <span class="toggle_menu"><span></span></span>
             </div>
         </div>

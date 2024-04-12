@@ -15928,7 +15928,7 @@ a img.aligncenter {
 		left: -20px;
 		position: absolute;
 		right: -20px;
-		bottom: 0;
+		bottom: -10px;
 		z-index: 1;
 	}
 
@@ -16738,13 +16738,15 @@ a img.aligncenter {
 a.logo {
 	align-items: center;
 	display: flex;
-	padding-bottom: 5px;
-	padding-top: 5px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	height: 100px;
+	width: 100px;
 }
 
 a.logo img {
 	display: inline-block;
-	max-height: 80px;
+	height: 100px;
 }
 
 a.logo .logo-text {
@@ -19639,4 +19641,13 @@ img.absolute_image {
 	}
 
 
+}
+
+@media screen and (max-width: 768px){
+	.fa-globe{
+		font-size: 25px;
+		position: absolute;
+		top: 1px;
+		right: -32px;
+	}
 }

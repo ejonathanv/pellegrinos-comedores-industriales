@@ -14,6 +14,7 @@ Route::get('/setlocale/{locale}', function ($locale) {
 })->name('lang');
 
 Route::get('/', [WebsiteController::class, 'index'])->name('website.index')->middleware(LangMiddleware::class);
+Route::post('/contact-to-pellegrinos-1748', [WebsiteController::class, 'contact'])->name('contact-to-pellegrinos');
 
 
 // Route::get('/dashboard', function () {
