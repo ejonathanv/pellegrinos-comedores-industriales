@@ -6,7 +6,9 @@
 	<!--[if IE]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<![endif]-->
-	<meta name="description" content="">
+	<meta name="description" content="Pellegrino's Comedores Industriales - Tu aliado culinario en el corazón industrial de Tijuana.">
+	<meta name="author" content="Pellegrino's Comedores Industriales">
+	<meta name="keywords" content="comedor industrial, catering, eventos, empresas, Tijuana, Baja California, México, comidas para empleados, industrial kitchen, vending saludable, healthy vending">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/favicon/apple-icon-57x57.png') }}">
