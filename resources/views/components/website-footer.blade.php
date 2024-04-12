@@ -16,10 +16,14 @@
                         11202, Camino Vecinal , Colonia Rancho, El Refugio, 22253  Tijuana, B.C. 
                     </p>
                     <div class="d-flex justify-content-center justify-content-lg-start social-media-icons">
-                        <a href="#" style="color: #3b5998">
+                        <a href="https://www.facebook.com/PellegrinosCatering/" 
+                            target="_blank"
+                            style="color: #3b5998">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" style="color: #E1306C">
+                        <a href="https://www.instagram.com/pellegrino_s_catering" 
+                            target="_blank"
+                            style="color: #E1306C">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="https://wa.me/526643756259" target="_blank" style="color: #25d366">

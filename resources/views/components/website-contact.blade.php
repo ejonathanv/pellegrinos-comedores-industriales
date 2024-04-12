@@ -3,6 +3,13 @@
         <div class="coverPicture" style="background-image: url('img/portadas/contacto.jpg')">
         </div>
         <div class="form">
+
+            @if(session('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
+
             <form action="{{ route('contact-to-pellegrinos') }}" 
                 onsubmit="document.getElementById('contactForm_submit').disabled = true; return true;"
                 method="POST">

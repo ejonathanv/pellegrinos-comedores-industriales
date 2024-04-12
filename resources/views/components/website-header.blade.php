@@ -73,13 +73,19 @@
                 </div>
 
                 <div class="col-xl-2 col-lg-3 col-4 text-right d-none d-lg-block social-media-icons">
-                    <a href="#" style="color: #6382c4">
+                    <a href="https://www.facebook.com/PellegrinosCatering/" 
+                        target="_blank"
+                        style="color: #6382c4">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" style="color: #E66490">
+                    <a href="https://www.instagram.com/pellegrino_s_catering" 
+                        target="_blank"
+                        style="color: #E66490">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" style="color: #25d366">
+                    <a href="https://wa.me/526643756259"
+                        target="_blank"
+                        style="color: #25d366">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
