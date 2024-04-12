@@ -88,10 +88,6 @@
                 <img src="{{ asset('img/galeria/cocinas/slides/slide4.jpg') }}" alt="Diseño de cocinas">
             </div>
 
-            <div>
-                <img src="{{ asset('img/galeria/cocinas/slides/slide5.jpg') }}" alt="Diseño de cocinas">
-            </div>
-
         </div>
     </div>
 </section>

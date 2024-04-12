@@ -20,7 +20,7 @@ return [
         ],
         'three' => [
             'title' => 'Innovación en cada detalle',
-            'description' => 'Diseño de cocinas industriales a medida'
+            'description' => 'Diseño de cocinas industriales a la medida'
         ]
     ],
     
