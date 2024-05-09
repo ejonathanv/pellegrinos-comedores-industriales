@@ -8,7 +8,7 @@
                     </span>
                 </h3>
                 <div class="divider-40 divider-xl-20"></div>
-                <p class="text-center color-darkgrey fs-20 fw-500">
+                <p class="justify-text text-md-center color-darkgrey fs-20 fw-500">
                     <span>
                         {{ __('website.clients.description') }}
                     </span>

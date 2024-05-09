@@ -62,7 +62,7 @@
             </span>
         </h3>
         <div class="divider-40 divider-lg-25 divider-xl-50"></div>
-        <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
+        <p class="justify-text color-darkgrey fs-20 fw-500">
             <span>
                 {{ __('website.galleries.two.description') }}
             </span>

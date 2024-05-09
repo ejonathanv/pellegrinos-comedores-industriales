@@ -10,7 +10,7 @@
                                 {{ __('website.services.title') }}
                             </span>
                         </h3>
-                        <p class="text-center text-lg-left color-darkgrey fw-500">
+                        <p class="justify-text color-darkgrey fw-500">
                             <span>
                                 {{ __('website.services.description') }}
                             </span>
@@ -57,7 +57,7 @@
                                 <h5 class="mt-1">
                                     {{ __('website.services.serviceOne.title') }}
                                 </h5>
-                                <p>
+                                <p class="justify-text">
                                     {{ __('website.services.serviceOne.description') }}
                                 </p>
                             </div>
@@ -73,7 +73,7 @@
                                 <h5 class="mt-1">
                                     {{ __('website.services.serviceTwo.title') }}
                                 </h5>
-                                <p>
+                                <p class="justify-text">
                                     {{ __('website.services.serviceTwo.description') }}
                                 </p>
                             </div>

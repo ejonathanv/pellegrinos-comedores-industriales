@@ -19651,3 +19651,11 @@ img.absolute_image {
 		right: -32px;
 	}
 }
+
+.justify-text{
+	text-align: justify;
+	text-align-last: auto;
+	hyphens: auto;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+}

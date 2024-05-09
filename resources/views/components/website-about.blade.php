@@ -7,10 +7,10 @@
                     <span>Pellegrino's <br> {{ __('website.about.title') }}</span>
                 </h3>
                 <div class="divider-40 divider-xl-50"></div>
-                <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
+                <p class="justify-text color-darkgrey fs-20 fw-500">
                     {{ __('website.about.paragraphOne') }}
                 </p>
-                <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
+                <p class="text-justify color-darkgrey fs-20 fw-500">
                     {{ __('website.about.paragraphTwo') }} 
                 </p>
                 <div class="divider-40 divider-xl-50"></div>
@@ -41,7 +41,7 @@
                     </span>
                 </h3>
                 <div class="divider-40 divider-xl-50"></div>
-                <p class="text-center text-md-left color-darkgrey fs-20 fw-500">
+                <p class="justify-text text-md-left color-darkgrey fs-20 fw-500">
                     <span>
                         {{ __('website.about.paragraphThree') }}
                     </span>
