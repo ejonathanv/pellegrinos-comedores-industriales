@@ -79,10 +79,17 @@ return [
             'message' => 'Message',
             'submit' => 'Submit',
         ],
+        'certifications' => [
+            'title' => 'Certifications',
+            'description' => 'At Pellegrino´s Comedores Industriales, we have a REPSE certificate, and we are fiscally up to date. We also have the necessary accreditations for proper food handling:',
+            'certification_one' => 'DC3: Certificate of Competencies or Labor Skills',
+            'certification_two' => 'Hygienic Food Handling by All our Staff',
+        ]
     ],
 
     'footer' => [
         'rights' => 'All Rights Reserved',
+        'img_rights' => 'All images are property of Comedores Pellegrinos and are protected by copyright.'
     ]
 
 ];

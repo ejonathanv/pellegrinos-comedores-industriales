@@ -79,9 +79,16 @@ return [
             'message' => 'Mensaje',
             'submit' => 'Enviar',
         ],
+        'certifications' => [
+            'title' => 'Certificaciones',
+            'description' => 'En Pellegrino´s Comedores Industriales contamos con certificado REPSE, y nos encontramos fiscalmente al corriente. También contamos con las acreditaciones necesarias para la correcta manipulación de los alimentos:',
+            'certification_one' => 'DC3: Constancia de Competencias o de Habilidades Laborales',
+            'certification_two' => 'Manejo Higiénico de los Alimentos de todo Nuestro Personal',
+        ]
     ],
 
     'footer' => [
         'rights' => 'Derechos Reservados',
+        'img_rights' => 'Todas las imágenes son propiedad de Comedores Pellegrinos y están protegidas por derechos de autor.'
     ]
 ];

@@ -19650,6 +19650,10 @@ img.absolute_image {
 		top: 1px;
 		right: -32px;
 	}
+
+	.certificationsBox{
+		margin-top: 20px;
+	}
 }
 
 .justify-text{
@@ -19658,4 +19662,20 @@ img.absolute_image {
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;
+}
+
+.certificationsList{
+	padding: 0;
+	margin: 0;
+}
+
+.certificationsList span{
+	display: inline-block;
+	margin-right: 10px;
+	font-size: 14px;
+	margin-bottom: 10px;
+	background-color: #eeeeee;
+	padding: 10px;
+	border-radius: 5px;
+	width: 100%;
 }
