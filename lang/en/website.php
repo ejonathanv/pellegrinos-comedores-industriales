@@ -81,9 +81,9 @@ return [
         ],
         'certifications' => [
             'title' => 'Certifications',
-            'description' => 'At Pellegrino´s Comedores Industriales, we have a REPSE certificate, and we are fiscally up to date. We also have the necessary accreditations for proper food handling:',
-            'certification_one' => 'DC3: Certificate of Competencies or Labor Skills',
-            'certification_two' => 'Hygienic Food Handling by All our Staff',
+            'description' => "At Pellegrino's Comedores Industriales, we have a REPSE certificate, and we are fiscally up to date. We also have the necessary accreditations for proper food handling:",
+            'certification_one' => 'DC3: Certificate of competencies or labor skills',
+            'certification_two' => 'Hygienic food handling by all our staff',
         ]
     ],
 

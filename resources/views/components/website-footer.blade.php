@@ -31,10 +31,16 @@
             <div class="col-xl-4 col-lg-3 text-center text-lg-left animate certificationsBox"
                 data-animation="fadeInUp">
                 <div class="widget widget_text">
-                    <h3 class="widget-title">
-                        <i class="fa fa-certificate" style="color: #f7b731"></i>
-                        {{ __('website.contact.certifications.title') }}
-                    </h3>
+                    <div class="d-flex justify-content-start justify-content-lg-start" style="position: relative;">
+                        <div>
+                            <img src="{{ asset('img/quality_certificate.png') }}" alt="img" style="width: 50px; height: auto; position: absolute; right: 0; top: -25px;">
+                        </div>
+                        <div>
+                            <h3 class="widget-title flex items-start">
+                                {{ __('website.contact.certifications.title') }}
+                            </h3>
+                        </div>
+                    </div>
                     <p class="justify-text" style="font-size: .8rem">
                         {{ __('website.contact.certifications.description') }}
                     </p>
