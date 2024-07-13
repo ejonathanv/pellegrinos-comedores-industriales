@@ -19580,6 +19580,9 @@ img.absolute_image {
 .social-media-icons.clients a.client3 img{
 	width: 170px; height: auto;
 }
+.social-media-icons.clients a.client4 img{
+	width: 200px; height: auto;
+}
 
 .contactForm{
 	display: flex;

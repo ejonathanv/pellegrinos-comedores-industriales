@@ -18,6 +18,7 @@
                     <a href="#" class="client1"><img src="img/clientes/tsc.png" alt="img"></a>
                     <a href="#" class="client2"><img src="img/clientes/monster-digital.png" alt="img"></a>
                     <a href="#" class="client3"><img src="img/clientes/tecma.png" alt="img"></a>
+                    <a href="#" class="client4"><img src="img/clientes/samwoo.png" alt="img"></a>
                 </div>
             </div>
         </div>
