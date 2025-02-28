@@ -13,7 +13,7 @@
                         {{ __('website.contact.address') }}
                     </h3>
                     <p>
-                        Calle 11 norte 1001 ciudad Industrial 22444 Tijuana B.C
+                        Calle 11 Norte 1001, Ciudad Industrial, 22444 Tijuana,  B.C.
                     </p>
                     <div class="d-flex justify-content-center justify-content-lg-start social-media-icons">
                         <a href="https://www.facebook.com/PellegrinosCatering/" target="_blank" style="color: #3b5998">
