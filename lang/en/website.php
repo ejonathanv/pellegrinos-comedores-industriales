@@ -57,7 +57,7 @@ return [
         ],
         'two' => [
             'title' => 'Our Facilities',
-            'description' => 'We ensure that every kitchen we design is functional, safe, and efficient, to offer the best culinary experience.'
+            'description' => 'We have modern and spacious facilities, equipped with the latest technology and designed under strict quality, hygiene, and safety standards to provide the best service to our clients.'
         ],
     ],
 

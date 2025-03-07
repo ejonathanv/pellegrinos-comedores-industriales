@@ -57,7 +57,7 @@ return [
         ],
         'two' => [
             'title' => 'Nuestras instalaciones',
-            'description' => 'Nos aseguramos de que cada cocina que diseñamos sea funcional, segura y  eficiente, para poder ofrecer la mejor experiencia culinaria.'
+            'description' => 'Contamos con instalaciones modernas y espaciosas, equipadas con la más alta tecnología y diseñadas bajo estrictos estándares de calidad, higiene y seguridad para brindar el mejor servicio a nuestros clientes.'
         ],
     ],
 
