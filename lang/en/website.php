@@ -56,7 +56,7 @@ return [
             'description' => 'We are a reliable partner for companies, contributing to the well-being and productivity of their employees by delivering nutritious, safe, and tasty meals.'
         ],
         'two' => [
-            'title' => 'Kitchen Design',
+            'title' => 'Our Facilities',
             'description' => 'We ensure that every kitchen we design is functional, safe, and efficient, to offer the best culinary experience.'
         ],
     ],

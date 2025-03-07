@@ -56,7 +56,7 @@ return [
             'description' => 'Somos un socio confiable para las empresas, contribuyendo al bienestar  y la productividad de sus empleados mediante la entrega de comidas nutritivas, seguras y sabrosas.'
         ],
         'two' => [
-            'title' => 'Diseño de Cocinas',
+            'title' => 'Nuestras instalaciones',
             'description' => 'Nos aseguramos de que cada cocina que diseñamos sea funcional, segura y  eficiente, para poder ofrecer la mejor experiencia culinaria.'
         ],
     ],
