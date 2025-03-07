@@ -20,7 +20,7 @@ return [
         ],
         'three' => [
             'title' => 'Innovación en cada detalle',
-            'description' => 'Diseño de cocinas industriales a la medida'
+            'description' => 'Nuestras instalaciones modernas y funcionales'
         ]
     ],
     
@@ -39,10 +39,10 @@ return [
 
     'services' => [
         'title' => 'Tu éxito es nuestro plato principal, servicio tras servicio.',
-        'description' => 'Mejoramos la experiencia laboral al ofrecer  servicios culinarios excepcionales, comenzando desde comedores corporativos y  abarcando el diseño de cocinas industriales.',
+        'description' => 'Mejoramos la experiencia laboral al ofrecer servicios culinarios excepcionales, comenzando desde comedores corporativos hasta nuestras modernas instalaciones.',
         'serviceOne' => [
-            'title' => 'Diseño de cocinas',
-            'description' => 'Diseñamos cocinas industriales y comedores corporativos, con un enfoque en la eficiencia, la seguridad y la higiene.',
+            'title' => 'Nuestras Instalaciones',
+            'description' => 'Contamos con instalaciones modernas y espaciosas, diseñadas con un enfoque en la eficiencia, la seguridad y la higiene.',
         ],
         'serviceTwo' => [
             'title' => 'Comidas para empleados',

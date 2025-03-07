@@ -20,7 +20,7 @@ return [
         ],
         'three' => [
             'title' => 'Innovation in every detail',
-            'description' => 'Custom industrial kitchen design'
+            'description' => 'Our modern and functional facilities'
         ]
     ],
 
@@ -39,10 +39,10 @@ return [
 
     'services' => [
         'title' => 'Your success is our main dish, service after service.',
-        'description' => 'We enhance the work experience by offering exceptional culinary services, starting from corporate dining rooms and covering the design of industrial kitchens.',
+        'description' => 'We enhance the work experience by offering exceptional culinary services, from corporate dining rooms to our modern facilities.',
         'serviceOne' => [
-            'title' => 'Kitchen design',
-            'description' => 'We design industrial kitchens and corporate dining rooms, with a focus on efficiency, safety, and hygiene.',
+            'title' => 'Our Facilities',
+            'description' => 'We have modern and spacious facilities, designed with a focus on efficiency, safety, and hygiene.',
         ],
         'serviceTwo' => [
             'title' => 'Employee meals',
