@@ -75,7 +75,17 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-maincolor" id="contactForm_submit">
+                        {!! NoCaptcha::display() !!}
+                    </div>
+                    @error('g-recaptcha-response')
+                        <span class="text-danger">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-maincolor" id="contactForm_submit" onclick="if(grecaptcha.getResponse().length == 0){event.preventDefault();alert('Por favor verifica que no eres un robot');}">
                             {{ __('website.contact.form.submit') }}
                         </button>
                     </div>

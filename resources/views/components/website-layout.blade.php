@@ -35,6 +35,7 @@
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	{!! NoCaptcha::renderJs() !!}
 	<script src="js/modernizr-2.6.2.min.js"></script>
     <script src="https://kit.fontawesome.com/133291f590.js" crossorigin="anonymous"></script>
 	<!--[if lt IE 9]>

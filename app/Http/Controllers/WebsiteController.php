@@ -7,6 +7,7 @@ use App\Mail\NewContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Validation\Validator;
 use App\Http\Requests\ContactRequest;
 
 class WebsiteController extends Controller
@@ -17,6 +18,16 @@ class WebsiteController extends Controller
 
     public function contact(ContactRequest $request){
         
+        $validate = validator($request->all(), [
+            'g-recaptcha-response' => 'required|captcha'
+        ]);
+
+        if ($validate->fails()) {
+            return redirect()
+                ->route('website.index')
+                ->with('error', 'Captcha is required');
+        }
+
         // Vamos a enviar un correo para agracer al usuario
         $email = $request->email;
         Mail::to($email)->send(new ContactMail($request));
