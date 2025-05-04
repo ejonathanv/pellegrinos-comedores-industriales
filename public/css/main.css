@@ -19583,6 +19583,9 @@ img.absolute_image {
 .social-media-icons.clients a.client4 img{
 	width: 200px; height: auto;
 }
+.social-media-icons.clients a.client5 img{
+	width: 100px; height: auto;
+}
 
 .contactForm{
 	display: flex;
@@ -19614,6 +19617,12 @@ img.absolute_image {
 	}
 	.social-media-icons.clients a.client3 img{
 		width: 100px;
+	}
+	.social-media-icons.clients a.client4 img{
+		width: 120px;
+	}
+	.social-media-icons.clients a.client5 img{
+		width: 80px;
 	}
 
 	.contactForm{
