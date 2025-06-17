@@ -10,7 +10,9 @@
 
 	<a href="https://wa.me/526643756259" class="whatsapp-float" target="_blank">
 		<i class="fab fa-whatsapp"></i>
-		<span>Contáctanos</span>
+		<span>
+			{{ __('website.contact.whatsapp') }}
+		</span>
 	</a>
 
 </x-website-layout>
