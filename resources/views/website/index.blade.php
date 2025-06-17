@@ -10,7 +10,7 @@
 
 	<a href="https://wa.me/526643756259" class="whatsapp-float" target="_blank">
 		<i class="fab fa-whatsapp"></i>
-		<span>Contáctanos por WhatsApp</span>
+		<span>Contáctanos</span>
 	</a>
 
 </x-website-layout>
@@ -47,16 +47,5 @@
 .whatsapp-float span {
     font-size: 16px;
     font-weight: 500;
-}
-
-@media (max-width: 768px) {
-    .whatsapp-float span {
-        display: none;
-    }
-    
-    .whatsapp-float {
-        padding: 15px;
-        border-radius: 50%;
-    }
 }
 </style>
