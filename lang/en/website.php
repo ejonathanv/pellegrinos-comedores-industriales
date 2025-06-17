@@ -79,6 +79,7 @@ return [
             'message' => 'Message',
             'submit' => 'Submit',
         ],
+        'send_email' => 'Send Email',
         'certifications' => [
             'title' => 'Certifications',
             'description' => "At Pellegrino's Comedores Industriales, we have a REPSE certificate, and we are fiscally up to date. We also have the necessary accreditations for proper food handling:",
