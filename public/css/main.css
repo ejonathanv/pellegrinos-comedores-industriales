@@ -19595,7 +19595,7 @@ img.absolute_image {
 
 .contactForm .coverPicture{
 	width: 50%;
-	min-height: 700px;
+	min-height: 100vh;
 	background-color: #242424;
 	background-size: cover;
 	background-position: center;
