@@ -31,14 +31,15 @@
             <div class="col-xl-4 col-lg-3 text-center text-lg-left animate certificationsBox"
                 data-animation="fadeInUp">
                 <div class="widget widget_text">
-                    <div class="d-flex justify-content-start justify-content-lg-start" style="position: relative;">
-                        <div>
-                            <img src="{{ asset('img/quality_certificate.png') }}" alt="img" style="width: 50px; height: auto; position: absolute; right: 0; top: -25px;">
+                    <h3 class="widget-title flex items-start" style="margin-bottom: 20px;">
+                        {{ __('website.contact.certifications.title') }}
+                    </h3>
+                    <div class="d-flex justify-content-start justify-content-lg-start" style="position: relative; margin-bottom: 20px;">
+                        <div class="d-flex align-items-center">
+                            <img src="{{ asset('img/quality_certificate.png') }}" alt="img" style="width: auto; height: 75px; margin-right: 15px;">
+                            <img src="{{ asset('img/certificaciones/distintivo-h.jpg') }}" alt="img" style="width: auto; height: 80px;">
                         </div>
                         <div>
-                            <h3 class="widget-title flex items-start">
-                                {{ __('website.contact.certifications.title') }}
-                            </h3>
                         </div>
                     </div>
                     <p class="justify-text" style="font-size: .8rem">

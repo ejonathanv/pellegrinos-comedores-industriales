@@ -16,7 +16,7 @@ class WebsiteController extends Controller
         return view('website.index');
     }
 
-    public function contact(ContactRequest $request){
+    public function contactToPellegrinos(ContactRequest $request){
         
         $validate = validator($request->all(), [
             'g-recaptcha-response' => 'required|captcha'
