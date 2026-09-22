@@ -23,73 +23,99 @@
                     </span>
                 </p>
                 <div class="divider-40 divider-xl-20"></div>
-                <h4 class="mt-0 mb-2 special-heading color-darkgrey">
-                    <div class="form-group row">
-                        <div class="col-md-6">
-                            <input type="text"
-                                class="form-control"
-                                name="firstName"
-                                placeholder="{{ __('website.contact.form.firstName') }}"
-                                required>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text"
-                                class="form-control"
-                                name="lastName"
-                                placeholder="{{ __('website.contact.form.lastName') }}"
-                                required>
-                        </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <input type="text"
+                            class="form-control"
+                            name="firstName"
+                            placeholder="{{ __('website.contact.form.firstName') }}"
+                            required>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-md-6">
-                            <input type="email"
-                                class="form-control"
-                                name="email"
-                                placeholder="{{ __('website.contact.form.email') }}"
-                                required>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text"
-                                class="form-control"
-                                name="phone"
-                                placeholder="{{ __('website.contact.form.phone') }}"
-                                required>
-                        </div>
+                    <div class="col-md-6">
+                        <input type="text"
+                            class="form-control"
+                            name="lastName"
+                            placeholder="{{ __('website.contact.form.lastName') }}"
+                            required>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-md-12">
-                            <input type="text"
-                                class="form-control"
-                                name="subject"
-                                placeholder="{{ __('website.contact.form.subject') }}"
-                                required>
-                        </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <input type="email"
+                            class="form-control"
+                            name="email"
+                            placeholder="{{ __('website.contact.form.email') }}"
+                            required>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-md-12">
-                            <textarea class="form-control"
-                                name="message"
-                                placeholder="{{ __('website.contact.form.message') }}" rows="3" required></textarea>
-                        </div>
+                    <div class="col-md-6">
+                        <input type="text"
+                            class="form-control"
+                            name="phone"
+                            placeholder="{{ __('website.contact.form.phone') }}"
+                            required>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-md-12">
-                            {!! NoCaptcha::display() !!}
-                        </div>
-                        @error('g-recaptcha-response')
-                        <span class="text-danger">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <input type="text"
+                            class="form-control"
+                            name="subject"
+                            placeholder="{{ __('website.contact.form.subject') }}"
+                            required>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-md-12">
-                            <button type="submit" class="btn btn-maincolor" id="contactForm_submit" onclick="if(grecaptcha.getResponse().length == 0){event.preventDefault();alert('Por favor verifica que no eres un robot');}">
-                                {{ __('website.contact.form.submit') }}
-                            </button>
-                        </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <textarea class="form-control"
+                            name="message"
+                            placeholder="{{ __('website.contact.form.message') }}" rows="3" required></textarea>
                     </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        {!! NoCaptcha::display() !!}
+                    </div>
+                    @error('g-recaptcha-response')
+                    <span class="text-danger">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-maincolor" id="contactForm_submit" onclick="if(grecaptcha.getResponse().length == 0){event.preventDefault();alert('Por favor verifica que no eres un robot');}">
+                            {{ __('website.contact.form.submit') }}
+                        </button>
+                    </div>
+                </div>
             </form>
+            <div class="divider-40 divider-xl-30"></div>
+            <div class="row contact-info-blocks">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h4 class="mt-0 mb-2 special-heading color-darkgrey">
+                        <span>{{ __('website.contact.phone') }}</span>
+                    </h4>
+                    <p class="color-darkgrey fw-500 mb-0">
+                        <a href="tel:+526643756259">{{ __('website.contact.phone_value') }}</a>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h4 class="mt-0 mb-2 special-heading color-darkgrey">
+                        <span>{{ __('website.contact.email') }}</span>
+                    </h4>
+                    <p class="color-darkgrey fw-500 mb-0">
+                        <a href="mailto:{{ __('website.contact.email_value') }}">{{ __('website.contact.email_value') }}</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="mt-0 mb-2 special-heading color-darkgrey">
+                        <span>{{ __('website.contact.address') }}</span>
+                    </h4>
+                    <p class="color-darkgrey fw-500 mb-0">
+                        {{ __('website.contact.address_value') }}
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>

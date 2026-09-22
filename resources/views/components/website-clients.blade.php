@@ -15,11 +15,10 @@
                 </p>
                 <div class="divider-40 divider-xl-20"></div>
                 <div class="d-flex justify-content-center justify-content-lg-center social-media-icons clients">
-                    <a href="#" class="client1"><img src="img/clientes/tsc.png" alt="img"></a>
-                    <a href="#" class="client2"><img src="img/clientes/monster-digital.png" alt="img"></a>
-                    <a href="#" class="client3"><img src="img/clientes/tecma.png" alt="img"></a>
-                    <a href="#" class="client4"><img src="img/clientes/samwoo.png" alt="img"></a>
-                    <a href="#" class="client5"><img src="img/clientes/giant.jpeg" alt="img"></a>
+                    <a href="#" class="client1"><img src="{{ asset('img/clientes/atlas.webp') }}" alt="Atlas"></a>
+                    <a href="#" class="client2"><img src="{{ asset('img/clientes/nadro2.webp') }}" alt="Nadro"></a>
+                    <a href="#" class="client3"><img src="{{ asset('img/clientes/similares.webp') }}" alt="Farmacias Similares"></a>
+                    <a href="#" class="client4"><img src="{{ asset('img/clientes/tecma.webp') }}" alt="Tecma"></a>
                 </div>
             </div>
         </div>

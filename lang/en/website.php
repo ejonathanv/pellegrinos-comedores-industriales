@@ -34,19 +34,28 @@ return [
         'stats' => [
             'one' => 'Approximate dishes served per month',
             'two' => 'Years of experience in the food industry',
-        ]
+        ],
+        'excellence' => [
+            'title' => 'Excellence in Service',
+            'subtitle' => 'We have years of experience in the food industry',
+            'description' => 'We adapt to any space to guarantee customer satisfaction; our menus offer a wide variety for an unforgettable culinary experience.',
+        ],
     ],
 
     'services' => [
-        'title' => 'Your success is our main dish, service after service.',
-        'description' => 'We enhance the work experience by offering exceptional culinary services, from corporate dining rooms to our modern facilities.',
+        'title' => 'Our Services',
+        'description' => 'From homemade and healthy dishes to a welcoming atmosphere and professional service, we strive to exceed your expectations with authentic flavors and attention to every detail.',
         'serviceOne' => [
-            'title' => 'Our Facilities',
-            'description' => 'We have modern and spacious facilities, designed with a focus on efficiency, safety, and hygiene.',
+            'title' => 'Industrial Dining Room',
+            'description' => 'Complete industrial dining solutions tailored to factories and companies, with nutritious meals prepared to the highest quality standards.',
         ],
         'serviceTwo' => [
-            'title' => 'Employee meals',
-            'description' => 'We provide healthy and fresh meals in the workplace, with options prepared on the spot and personalized executive menus.',
+            'title' => 'Coffee break',
+            'description' => 'Coffee breaks and snack services designed to keep your team energized throughout the workday.',
+        ],
+        'serviceThree' => [
+            'title' => 'Catering for Events',
+            'description' => 'Corporate event catering with fresh food delivery, on-site preparation, and cleanup included.',
         ],
     ],
 
@@ -68,7 +77,12 @@ return [
 
     'contact' => [
         'address' => 'Address',
-        'title' => 'Contact Us',
+        'address_value' => 'Ciudad Industrial, 22444 Tijuana, B.C.',
+        'phone' => 'Phone',
+        'phone_value' => '+52 664 375 6259',
+        'email' => 'Email',
+        'email_value' => 'cateringpellegrinos@gmail.com',
+        'title' => 'Get In Touch',
         'description' => 'Do you have any questions or comments? We would love to hear from you. Please fill out the form below and we will get back to you as soon as possible.',
         'form' => [
             'firstName' => 'First Name',

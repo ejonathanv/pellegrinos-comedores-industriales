@@ -34,19 +34,28 @@ return [
         'stats' => [
             'one' => 'Platos servidos aproximadamente al mes',
             'two' => 'Años de experiencia en la industria alimenticia',
-        ]
+        ],
+        'excellence' => [
+            'title' => 'Excelencia en el servicio',
+            'subtitle' => 'Contamos con años de experiencia en la industria alimenticia',
+            'description' => 'Nos adaptamos a cualquier espacio para garantizar la satisfacción del cliente; nuestros menús ofrecen una amplia variedad para una experiencia culinaria inolvidable.',
+        ],
     ],
 
     'services' => [
-        'title' => 'Tu éxito es nuestro plato principal, servicio tras servicio.',
-        'description' => 'Mejoramos la experiencia laboral al ofrecer servicios culinarios excepcionales, comenzando desde comedores corporativos hasta nuestras modernas instalaciones.',
+        'title' => 'Nuestros Servicios',
+        'description' => 'Desde platillos caseros y saludables hasta un ambiente acogedor y un servicio profesional, nos esforzamos para superar tus expectativas con sabores auténticos y atención a cada detalle.',
         'serviceOne' => [
-            'title' => 'Nuestras Instalaciones',
-            'description' => 'Contamos con instalaciones modernas y espaciosas, diseñadas con un enfoque en la eficiencia, la seguridad y la higiene.',
+            'title' => 'Comedor Industrial',
+            'description' => 'Soluciones completas de comedor industrial para fábricas y empresas, con comidas nutritivas preparadas bajo los más altos estándares de calidad.',
         ],
         'serviceTwo' => [
-            'title' => 'Comidas para empleados',
-            'description' => 'Proporcionamos comidas saludables y frescas en el lugar de trabajo, con opciones preparadas en el momento y menús ejecutivos personalizados.',
+            'title' => 'Coffee break',
+            'description' => 'Servicio de coffee break y refrigerios pensados para mantener a tu equipo con energía durante la jornada laboral.',
+        ],
+        'serviceThree' => [
+            'title' => 'Catering para eventos',
+            'description' => 'Catering para eventos corporativos con entrega de alimentos frescos, preparación en el lugar y limpieza incluidas.',
         ],
     ],
 
@@ -63,13 +72,18 @@ return [
 
     'clients' => [
         'title' => 'Nuestros clientes',
-        'description' => "Conoce a algunos de nuestros clientes satisfechos que han confiado en Pellegrino's Comedores  Industriales para sus necesidades corporativas."
+        'description' => 'Conoce a algunas de las empresas que han confiado en nosotros para brindar a sus empleados la mejor experiencia culinaria.',
     ],
 
     'contact' => [
         'address' => 'Dirección',
+        'address_value' => 'Ciudad Industrial, 22444 Tijuana, B.C.',
+        'phone' => 'Teléfono',
+        'phone_value' => '+52 664 375 6259',
+        'email' => 'Correo electrónico',
+        'email_value' => 'cateringpellegrinos@gmail.com',
         'title' => 'Contáctanos',
-        'description' => '¿Tienes alguna pregunta o comentario? ¡Contáctanos! Estamos aquí para ayudarte.',
+        'description' => '¿Tienes alguna pregunta o comentario? Nos encantaría saber de ti. Completa el formulario y te responderemos lo antes posible.',
         'form' => [
             'firstName' => 'Nombre',
             'lastName' => 'Apellido',

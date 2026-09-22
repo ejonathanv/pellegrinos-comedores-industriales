@@ -81,3 +81,26 @@
         </div>
     </div>
 </section>
+<section id="excellence" class="ls ms s-py-90 s-py-xl-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 text-center text-lg-left animate" data-animation="fadeInUp" style="margin-left: auto; margin-right: auto;">
+                <h3 class="text-center mt-0 mb-2 special-heading color-darkgrey">
+                    <span>
+                        {{ __('website.about.excellence.title') }}
+                    </span>
+                </h3>
+                <div class="divider-40 divider-xl-20"></div>
+                <h5 class="text-center color-main">
+                    {{ __('website.about.excellence.subtitle') }}
+                </h5>
+                <div class="divider-30"></div>
+                <p class="justify-text text-md-center color-darkgrey fs-20 fw-500">
+                    <span>
+                        {{ __('website.about.excellence.description') }}
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

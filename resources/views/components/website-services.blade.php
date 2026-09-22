@@ -25,32 +25,10 @@
             </div>
             <div class="col-lg-6 col-xl-9">
                 <div class="quote-carousel owl-carousel" data-margin="60" data-responsive-xl="2" data-responsive-ml="2" data-responsive-lg="2" data-responsive-md="1" data-responsive-sm="2" data-responsive-xs="1" data-dots="false" data-loop="true" data-autoplay="true">
-                    {{--
-                    <!-- Catering para empresas -->
+                    <!-- Comedor Industrial -->
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
-                            <img src="images/img_4.jpg" alt="img">
-                            <div class="media-links">
-                                <a class="abs-link" title="" href="service-single.html"></a>
-                            </div>
-                        </div>
-                        <div class="item-content">
-                            <div class="item-content-wrap">
-                                <h5 class="mt-1">
-                                    Catering para empresas
-                                </h5>
-                                <p>
-                                    Ofrecemos catering para eventos corporativos en el lugar de trabajo, con entrega de alimentos frescos, preparación y limpieza incluidas.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    --}}
-
-                    <!-- Diseño de cocinas -->
-                    <div class="vertical-item service-layout-1 ls">
-                        <div class="item-media">
-                            <img src="images/img_5.jpg" alt="img">
+                            <img src="images/img_1.jpg" alt="{{ __('website.services.serviceOne.title') }}">
                         </div>
                         <div class="item-content">
                             <div class="item-content-wrap">
@@ -63,10 +41,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Comidas para empleados -->
+                    <!-- Coffee break -->
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
-                            <img src="images/img_1.jpg" alt="img">
+                            <img src="images/img_5.jpg" alt="{{ __('website.services.serviceTwo.title') }}">
                         </div>
                         <div class="item-content">
                             <div class="item-content-wrap">
@@ -79,27 +57,22 @@
                             </div>
                         </div>
                     </div>
-                    {{--
-                    <!-- Vending saludable -->
+                    <!-- Catering para eventos -->
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
-                            <img src="images/img_6.jpg" alt="img">
-                            <div class="media-links">
-                                <a class="abs-link" title="" href="service-single.html"></a>
-                            </div>
+                            <img src="images/img_4.jpg" alt="{{ __('website.services.serviceThree.title') }}">
                         </div>
                         <div class="item-content">
                             <div class="item-content-wrap">
                                 <h5 class="mt-1">
-                                    Vending saludable
+                                    {{ __('website.services.serviceThree.title') }}
                                 </h5>
-                                <p>
-                                    Máquinas expendedoras de alimentos y bebidas saludables en el lugar de trabajo, ofreciendo opciones nutritivas y variadas las 24 horas del día.
+                                <p class="justify-text">
+                                    {{ __('website.services.serviceThree.description') }}
                                 </p>
                             </div>
                         </div>
                     </div>
-                    --}}
                 </div>
             </div>
         </div>
