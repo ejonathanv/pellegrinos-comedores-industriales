@@ -13,7 +13,7 @@
                         {{ __('website.contact.address') }}
                     </h3>
                     <p>
-                        Calle 11 Norte 1001, Ciudad Industrial, 22444 Tijuana,  B.C.
+                        {{ __('website.contact.address_value') }}
                     </p>
                     <div class="d-flex justify-content-center justify-content-lg-start social-media-icons">
                         <a href="https://www.facebook.com/PellegrinosCatering/" target="_blank" style="color: #3b5998">
@@ -36,8 +36,7 @@
                     </h3>
                     <div class="d-flex justify-content-start justify-content-lg-start" style="position: relative; margin-bottom: 20px;">
                         <div class="d-flex align-items-center">
-                            <img src="{{ asset('img/quality_certificate.png') }}" alt="img" style="width: auto; height: 75px; margin-right: 15px;">
-                            <img src="{{ asset('img/certificaciones/distintivo-h.jpg') }}" alt="img" style="width: auto; height: 80px;">
+                            <img src="{{ asset('img/quality_certificate.png') }}" alt="img" style="width: auto; height: 75px;">
                         </div>
                         <div>
                         </div>

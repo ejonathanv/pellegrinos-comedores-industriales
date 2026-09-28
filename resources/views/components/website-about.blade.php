@@ -68,7 +68,7 @@
                                 <img src="img/icons/cooking_11941846.png" style="width: 50px; height: auto;">
                             </div>
                             <h3 class="special-heading text-uppercase counter-wrap color-main mt-2 mb-3">
-                                <span class="counter" data-from="0" data-to="2" data-speed="1500">0</span>
+                                <span class="counter" data-from="0" data-to="3" data-speed="1500">0</span>
                             </h3>
                             <p>
                                 {{ __('website.about.stats.two') }}

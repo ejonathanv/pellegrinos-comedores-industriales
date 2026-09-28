@@ -37,7 +37,7 @@ return [
         ],
         'excellence' => [
             'title' => 'Excelencia en el servicio',
-            'subtitle' => 'Contamos con años de experiencia en la industria alimenticia',
+            'subtitle' => 'Contamos con 3 años de experiencia en la industria alimenticia',
             'description' => 'Nos adaptamos a cualquier espacio para garantizar la satisfacción del cliente; nuestros menús ofrecen una amplia variedad para una experiencia culinaria inolvidable.',
         ],
     ],
@@ -77,7 +77,7 @@ return [
 
     'contact' => [
         'address' => 'Dirección',
-        'address_value' => 'Ciudad Industrial, 22444 Tijuana, B.C.',
+        'address_value' => 'Ciudad Industrial 22444 Tijuana',
         'phone' => 'Teléfono',
         'phone_value' => '+52 664 375 6259',
         'email' => 'Correo electrónico',
