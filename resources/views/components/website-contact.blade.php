@@ -90,8 +90,8 @@
                 </div>
             </form>
             <div class="divider-40 divider-xl-30"></div>
-            <div class="row contact-info-blocks">
-                <div class="col-md-4 mb-3 mb-md-0">
+            <div class="contact-info-blocks d-flex flex-column space-y-4">
+                <div style="margin-bottom: 20px;">
                     <h4 class="mt-0 mb-2 special-heading color-darkgrey">
                         <span>{{ __('website.contact.phone') }}</span>
                     </h4>
@@ -99,7 +99,7 @@
                         <a href="tel:+526643756259">{{ __('website.contact.phone_value') }}</a>
                     </p>
                 </div>
-                <div class="col-md-4 mb-3 mb-md-0">
+                <div style="margin-bottom: 20px;">
                     <h4 class="mt-0 mb-2 special-heading color-darkgrey">
                         <span>{{ __('website.contact.email') }}</span>
                     </h4>
@@ -107,15 +107,16 @@
                         <a href="mailto:{{ __('website.contact.email_value') }}">{{ __('website.contact.email_value') }}</a>
                     </p>
                 </div>
-                <div class="col-md-4">
+                <div>
                     <h4 class="mt-0 mb-2 special-heading color-darkgrey">
                         <span>{{ __('website.contact.address') }}</span>
                     </h4>
-                    <p class="color-darkgrey fw-500 mb-0">
+                    <p class="color-white fw-500 mb-0">
                         {{ __('website.contact.address_value') }}
                     </p>
                 </div>
             </div>
+       
         </div>
     </div>
 </section>
