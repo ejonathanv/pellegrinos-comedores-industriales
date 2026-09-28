@@ -10,6 +10,18 @@
             <div class="col-xl-4 col-lg-6 text-center text-lg-left animate" data-animation="fadeInUp">
                 <div class="widget widget_text">
                     <h3 class="widget-title">
+                        {{ __('website.contact.phone') }}
+                    </h3>
+                    <p>
+                        <a href="tel:+526643756259">{{ __('website.contact.phone_value') }}</a>
+                    </p>
+                    <h3 class="widget-title" style="margin-top: 0;">
+                        {{ __('website.contact.email') }}
+                    </h3>
+                    <p>
+                        <a href="mailto:{{ __('website.contact.email_value') }}">{{ __('website.contact.email_value') }}</a>
+                    </p>
+                    <h3 class="widget-title" style="margin-top: 0;">
                         {{ __('website.contact.address') }}
                     </h3>
                     <p>
