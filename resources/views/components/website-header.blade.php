@@ -78,7 +78,7 @@
                         style="color: #6382c4">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/pellegrino_s_catering" 
+                    <a href="https://www.instagram.com/pellegrino_s_comedores/" 
                         target="_blank"
                         style="color: #E66490">
                         <i class="fab fa-instagram"></i>
