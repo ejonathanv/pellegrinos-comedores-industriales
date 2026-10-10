@@ -4,10 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Mail\ContactMail;
 use App\Mail\NewContactMail;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
+use App\Support\Seo;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Validation\Validator;
 use App\Http\Requests\ContactRequest;
 
 class WebsiteController extends Controller
@@ -17,14 +15,14 @@ class WebsiteController extends Controller
     }
 
     public function contactToPellegrinos(ContactRequest $request){
-        
+        $homeUrl = Seo::url('home') . '#contact';
+
         $validate = validator($request->all(), [
             'g-recaptcha-response' => 'required|captcha'
         ]);
 
         if ($validate->fails()) {
-            return redirect()
-                ->route('website.index')
+            return redirect($homeUrl)
                 ->with('error', 'Captcha is required');
         }
 
@@ -36,19 +34,12 @@ class WebsiteController extends Controller
         $adminEmail = env('MAIL_CONTACT_ADDRESS');
         Mail::to($adminEmail)->send(new NewContactMail($request));
 
-        // Vamos a redirigir al usuario a la página de inicio con un mensaje de éxito
+        $message = app()->getLocale() === 'es'
+            ? 'Tu mensaje ha sido enviado con éxito'
+            : 'Your message has been sent successfully';
 
-        $locale = session()->get('locale');
-        $message = '';
-        if($locale == 'es'){
-            $message = 'Tu mensaje ha sido enviado con éxito';
-        }else{
-            $message = 'Your message has been sent successfully';
-        }
-
-        return redirect()
-            ->route('website.index')
-            ->with('success', $message);
-
+        return redirect($homeUrl)
+            ->with('success', $message)
+            ->with('lead_submitted', true);
     }
 }

@@ -22,7 +22,7 @@ class ContactMail extends Mailable
     public function __construct($request)
     {
         $this->request = $request;
-        $this->locale = session()->get('locale') ? session()->get('locale') : 'es';
+        $this->locale = app()->getLocale();
     }
 
     /**

@@ -1,6 +1,6 @@
 <section id="contact" class="cs s-py-90 s-py-xl-90">
     <div class="contactForm">
-        <div class="coverPicture" style="background-image: url('img/portadas/contacto.jpg')">
+        <div class="coverPicture" style="background-image: url('{{ asset('img/portadas/contacto.webp') }}')">
         </div>
         <div class="form">
             @if(session('success'))
@@ -12,6 +12,7 @@
                 onsubmit="document.getElementById('contactForm_submit').disabled = true; return true;"
                 method="POST">
                 @csrf
+                <input type="hidden" name="locale" value="{{ app()->getLocale() }}">
                 <h4 class="mt-0 mb-4 special-heading color-darkgrey">
                     <span>
                         {{ __('website.contact.title') }}

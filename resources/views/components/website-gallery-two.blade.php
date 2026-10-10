@@ -73,19 +73,19 @@
         <div class="owl-carousel" data-margin="60" data-responsive-xl="1" data-responsive-ml="1" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1" data-dots="true" data-loop="true" data-autoplay="true">
             
             <div>
-                <img src="{{ asset('img/galeria/cocinas/slides/slide1.jpg') }}" alt="Diseño de cocinas">
+                <img src="{{ asset('img/galeria/cocinas/slides/slide1.webp') }}" alt="{{ __('website.galleries.two.title') }}" width="1200" height="676" loading="lazy">
             </div>
 
             <div>
-                <img src="{{ asset('img/galeria/cocinas/slides/slide2.jpg') }}" alt="Diseño de cocinas">
+                <img src="{{ asset('img/galeria/cocinas/slides/slide2.webp') }}" alt="{{ __('website.galleries.two.title') }}" width="1200" height="676" loading="lazy">
             </div>
 
             <div>
-                <img src="{{ asset('img/galeria/cocinas/slides/slide3.jpg') }}" alt="Diseño de cocinas">
+                <img src="{{ asset('img/galeria/cocinas/slides/slide3.webp') }}" alt="{{ __('website.galleries.two.title') }}" width="1200" height="676" loading="lazy">
             </div>
 
             <div>
-                <img src="{{ asset('img/galeria/cocinas/slides/slide4.jpg') }}" alt="Diseño de cocinas">
+                <img src="{{ asset('img/galeria/cocinas/slides/slide4.webp') }}" alt="{{ __('website.galleries.two.title') }}" width="1200" height="676" loading="lazy">
             </div>
 
         </div>

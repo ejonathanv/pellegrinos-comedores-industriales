@@ -28,7 +28,7 @@
                     <!-- Comedor Industrial -->
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
-                            <img src="images/img_1.jpg" alt="{{ __('website.services.serviceOne.title') }}">
+                            <img src="{{ asset('images/img_1.webp') }}" alt="{{ __('website.services.serviceOne.title') }}" width="800" height="600" loading="lazy">
                         </div>
                         <div class="item-content">
                             <div class="item-content-wrap">
@@ -44,7 +44,7 @@
                     <!-- Coffee break -->
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
-                            <img src="images/img_5.jpg" alt="{{ __('website.services.serviceTwo.title') }}">
+                            <img src="{{ asset('images/img_5.webp') }}" alt="{{ __('website.services.serviceTwo.title') }}" width="800" height="600" loading="lazy">
                         </div>
                         <div class="item-content">
                             <div class="item-content-wrap">
@@ -60,7 +60,7 @@
                     <!-- Catering para eventos -->
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
-                            <img src="images/img_4.jpg" alt="{{ __('website.services.serviceThree.title') }}">
+                            <img src="{{ asset('images/img_4.webp') }}" alt="{{ __('website.services.serviceThree.title') }}" width="800" height="600" loading="lazy">
                         </div>
                         <div class="item-content">
                             <div class="item-content-wrap">

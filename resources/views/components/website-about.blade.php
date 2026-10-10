@@ -22,8 +22,8 @@
             <div class="col-lg-6 mr--100-xl-with-scale">
                 <div class="post_format-post-format-video" style="position: relative">
                     <div class="embed-responsive embed-responsive-3by2">
-                        <video autoplay="" loop="" muted="" playsinline="" class="embed-responsive-item" style="position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover;">
-                            <source src="img/portadas/6037309_Chef_Food_Kitchen_1920x1080.mp4" type="video/mp4">
+                        <video autoplay="" loop="" muted="" playsinline="" preload="none" data-lazy-video poster="{{ asset('img/portadas/about-video-poster.webp') }}" class="embed-responsive-item" style="position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover;">
+                            <source data-src="{{ asset('img/portadas/6037309_Chef_Food_Kitchen_1920x1080.mp4') }}" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     <div class="col-md-4">
                         <div class="icon-box text-center text-md-left">
                             <div class="icon-styled color-darkgrey fs-50">
-                                <img src="img/icons/dish_857681.png" style="width: 50px; height: auto;">
+                                <img src="{{ asset('img/icons/dish_857681.png') }}" alt="" width="50" height="50" loading="lazy" style="width: 50px; height: auto;">
                             </div>
                             <h3 class="special-heading text-uppercase counter-wrap color-main mt-2 mb-3">
                                 <span class="counter" data-from="0" data-to="30000" data-speed="1500">0</span>
@@ -65,7 +65,7 @@
                     <div class="col-md-4">
                         <div class="icon-box text-center text-md-left">
                             <div class="icon-styled color-darkgrey fs-50">
-                                <img src="img/icons/cooking_11941846.png" style="width: 50px; height: auto;">
+                                <img src="{{ asset('img/icons/cooking_11941846.png') }}" alt="" width="50" height="50" loading="lazy" style="width: 50px; height: auto;">
                             </div>
                             <h3 class="special-heading text-uppercase counter-wrap color-main mt-2 mb-3">
                                 <span class="counter" data-from="0" data-to="3" data-speed="1500">0</span>

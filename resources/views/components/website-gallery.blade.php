@@ -73,23 +73,23 @@
         <div class="owl-carousel" data-margin="60" data-responsive-xl="1" data-responsive-ml="1" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1" data-dots="true" data-loop="true" data-autoplay="true">
             
             <div>
-                <img src="{{ asset('img/galeria/comidas/slides/slide1.jpg') }}" alt="Comidas para empleados">
+                <img src="{{ asset('img/galeria/comidas/slides/slide1.webp') }}" alt="{{ __('website.galleries.one.title') }}" width="1200" height="676" loading="lazy">
             </div>
 
             <div>
-                <img src="{{ asset('img/galeria/comidas/slides/slide2.jpg') }}" alt="Comidas para empleados">
+                <img src="{{ asset('img/galeria/comidas/slides/slide2.webp') }}" alt="{{ __('website.galleries.one.title') }}" width="1200" height="676" loading="lazy">
             </div>
 
             <div>
-                <img src="{{ asset('img/galeria/comidas/slides/slide3.jpg') }}" alt="Comidas para empleados">
+                <img src="{{ asset('img/galeria/comidas/slides/slide3.webp') }}" alt="{{ __('website.galleries.one.title') }}" width="1200" height="676" loading="lazy">
             </div>
 
             <div>
-                <img src="{{ asset('img/galeria/comidas/slides/slide4.jpg') }}" alt="Comidas para empleados">
+                <img src="{{ asset('img/galeria/comidas/slides/slide4.webp') }}" alt="{{ __('website.galleries.one.title') }}" width="1200" height="676" loading="lazy">
             </div>
 
             <div>
-                <img src="{{ asset('img/galeria/comidas/slides/slide5.jpg') }}" alt="Comidas para empleados">
+                <img src="{{ asset('img/galeria/comidas/slides/slide5.webp') }}" alt="{{ __('website.galleries.one.title') }}" width="1200" height="676" loading="lazy">
             </div>
 
         </div>

@@ -73,55 +73,74 @@ Español (principal)                      Inglés
 /contacto                                /en/contact
 ```
 
-- [ ] Español en la raíz con `html lang="es-MX"`.
-- [ ] Inglés bajo el prefijo `/en/` con `html lang="en"` y slugs traducidos.
-- [ ] Middleware que fija el idioma según la URL, no según la sesión.
-- [ ] Quitar la ruta `/setlocale/{locale}` y el idioma guardado en sesión.
-- [ ] Selector de idioma que enlaza a la página equivalente en el otro idioma (no a la portada).
-- [ ] Etiquetas `hreflang` en cada página: `es-MX`, `en` y `x-default` apuntando al español.
-- [ ] `canonical` de cada página apunta a su propia versión de idioma.
-- [ ] El sitemap incluye ambas versiones de cada página con sus alternativas `hreflang`.
-- [ ] Títulos, descripciones y Open Graph traducidos por idioma (`og:locale` `es_MX` y `en_US`).
-- [ ] Redirigir `?lang` o enlaces antiguos de cambio de idioma a la URL correcta con 301 si existen en producción.
+Las páginas, sus rutas por idioma, títulos y descripciones se definen en `config/seo.php`; los datos del negocio en `config/business.php`. Agregar una página nueva es agregar una entrada en `config/seo.php`.
+
+- [x] Español en la raíz con `html lang="es-MX"`.
+- [x] Inglés bajo el prefijo `/en/` con `html lang="en"` (los slugs traducidos se definen al crear cada página en la Fase 3).
+- [x] Middleware que fija el idioma según la URL, no según la sesión (`SetLocale`).
+- [x] Quitar la ruta `/setlocale/{locale}` y el idioma guardado en sesión.
+- [x] Selector de idioma que enlaza a la página equivalente en el otro idioma (no a la portada).
+- [x] Etiquetas `hreflang` en cada página: `es-MX`, `en` y `x-default` apuntando al español.
+- [x] `canonical` de cada página apunta a su propia versión de idioma.
+- [x] El sitemap incluye ambas versiones de cada página con sus alternativas `hreflang`.
+- [x] Títulos, descripciones y Open Graph traducidos por idioma (`og:locale` `es_MX` y `en_US`).
+- [x] Redirigir los enlaces antiguos `/setlocale/{locale}` a `/` o `/en` con 301.
 
 ### Metadatos
 
-- [ ] `title` único por URL con servicio y ciudad (hoy el título es solo `APP_NAME`).
-- [ ] `meta description` única por URL con beneficio y llamada a la acción.
-- [ ] Quitar `meta keywords` (no aporta y contiene términos que no aplican, como "vending saludable").
-- [ ] `link rel="canonical"` en cada URL.
-- [ ] Etiquetas Open Graph y Twitter con imagen y textos en español.
+- [x] `title` único por URL con servicio y ciudad.
+- [x] `meta description` única por URL con beneficio y llamada a la acción.
+- [x] Quitar `meta keywords`.
+- [x] `link rel="canonical"` en cada URL.
+- [x] Etiquetas Open Graph y Twitter con imagen (`img/og/pellegrinos-og.jpg`, 1200x630) y textos por idioma.
+- [x] Meta de verificación de Search Console desde `GOOGLE_SITE_VERIFICATION`.
 
 ### Descubrimiento
 
-- [ ] Generar `sitemap.xml` accesible (en producción respondía 404).
-- [ ] Referenciar el sitemap en `robots.txt`.
-- [ ] Verificar el sitio en Google Search Console y enviar el sitemap.
+- [x] Generar `sitemap.xml` accesible (ruta dinámica `/sitemap.xml`).
+- [x] Referenciar el sitemap en `robots.txt` (ruta dinámica `/robots.txt`).
+- [ ] Verificar el sitio en Google Search Console y enviar el sitemap (requiere despliegue y acceso del cliente).
 
 ### Datos estructurados
 
-- [ ] JSON-LD `LocalBusiness` / `Organization` con datos reales (nombre, teléfono, correo, dirección, horario, redes).
-- [ ] JSON-LD `Service` en cada página de servicio.
-- [ ] JSON-LD `BreadcrumbList` en páginas internas.
-- [ ] JSON-LD `FAQPage` donde haya preguntas frecuentes.
-- [ ] Validar con la prueba de resultados enriquecidos de Google antes de publicar.
+- [x] JSON-LD `LocalBusiness` con datos reales (nombre, teléfono, correo, dirección, área de servicio, redes). El horario se agrega al validarlo en la Fase 1.
+- [ ] JSON-LD `Service` en cada página de servicio (Fase 3).
+- [ ] JSON-LD `BreadcrumbList` en páginas internas (Fase 3).
+- [ ] JSON-LD `FAQPage` donde haya preguntas frecuentes (Fase 3).
+- [ ] Validar con la prueba de resultados enriquecidos de Google (requiere el sitio publicado).
 
 ### Rendimiento móvil
 
-- [ ] Medir con PageSpeed Insights / Lighthouse y guardar la línea base.
-- [ ] Convertir imágenes a WebP/AVIF y definir `width`/`height`.
-- [ ] Carga diferida (`loading="lazy"`) en imágenes fuera de la primera pantalla.
-- [ ] Revisar el peso de los videos de portada.
-- [ ] Diferir scripts no críticos (Font Awesome kit, reCAPTCHA, plugins del tema).
+- [x] Medir con Lighthouse y guardar la línea base.
+- [x] Convertir imágenes a WebP y definir `width`/`height`.
+- [x] Carga diferida (`loading="lazy"`) en imágenes fuera de la primera pantalla.
+- [x] Revisar el peso de los videos de portada (el video de "nosotros" carga solo al terminar la página y al estar cerca de la pantalla, con poster en WebP).
+- [x] Diferir scripts no críticos (Font Awesome kit y scripts del tema con `defer`; reCAPTCHA ya carga `async`).
+- [x] Reservar el alto del hero para evitar saltos de layout.
+- [ ] Cargar reCAPTCHA solo al interactuar con el formulario (pesa ~350 KB).
+- [ ] Medir de nuevo con PageSpeed Insights sobre el servidor de producción (con compresión y caché).
+
+Lighthouse móvil en local (`php artisan serve`, sin compresión ni caché):
+
+| Métrica | Antes | Después |
+|---------|-------|---------|
+| Rendimiento | 32 | 55 |
+| SEO | 92 | 100 |
+| Accesibilidad | 81 | 88 |
+| Buenas prácticas | 100 | 100 |
+| LCP | 38.5 s | 16.3 s |
+| CLS | 0.729 | 0 |
+| Peso total | 13.6 MB | 2.5 MB |
 
 ### Analítica
 
-- [ ] Instalar GA4 (o equivalente).
-- [ ] Evento: clic en WhatsApp.
-- [ ] Evento: clic en teléfono.
-- [ ] Evento: envío de formulario.
-- [ ] Evento: servicio de interés elegido en el formulario.
-- [ ] Registrar la landing de origen de cada solicitud.
+- [x] Instalar GA4 (se activa al definir `GA_MEASUREMENT_ID` en `.env`; sin ID no se carga).
+- [ ] Crear la propiedad de GA4 y obtener el ID de medición (requiere acceso del cliente).
+- [x] Evento: clic en WhatsApp (`click_whatsapp`).
+- [x] Evento: clic en teléfono (`click_phone`) y correo (`click_email`).
+- [x] Evento: envío de formulario (`generate_lead`, al enviarse con éxito).
+- [ ] Evento: servicio de interés elegido en el formulario (Fase 3).
+- [x] Registrar la página de origen en cada evento (`page_path` y `page_language`).
 
 ---
 

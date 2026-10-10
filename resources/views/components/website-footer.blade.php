@@ -3,7 +3,7 @@
         <div class="row" style="display:flex; align-items:start; justify-content: center">
             <div class="col-xl-4 col-lg-3 text-center text-lg-left animate" data-animation="fadeInUp">
                 <div class="widget widget_text">
-                    <img src="img/pellegrinos_comedores_industriales_logo.svg" alt="img" style="width: 300px; height: auto;">
+                    <img src="{{ asset('img/pellegrinos_comedores_industriales_logo.svg') }}" alt="{{ config('business.name') }}" width="300" height="212" loading="lazy" style="width: 300px; height: auto;">
                 </div>
                 <div class="divider-60 divider-lg-0"></div>
             </div>
@@ -13,28 +13,28 @@
                         {{ __('website.contact.phone') }}
                     </h3>
                     <p>
-                        <a href="tel:+526643756259">{{ __('website.contact.phone_value') }}</a>
+                        <a href="tel:{{ config('business.phone') }}" data-track="click_phone">{{ config('business.phone_display') }}</a>
                     </p>
                     <h3 class="widget-title" style="margin-top: 0;">
                         {{ __('website.contact.email') }}
                     </h3>
                     <p>
-                        <a href="mailto:{{ __('website.contact.email_value') }}">{{ __('website.contact.email_value') }}</a>
+                        <a href="mailto:{{ config('business.email') }}" data-track="click_email">{{ config('business.email') }}</a>
                     </p>
                     <h3 class="widget-title" style="margin-top: 0;">
                         {{ __('website.contact.address') }}
                     </h3>
                     <p>
-                        {{ __('website.contact.address_value') }}
+                        {{ config('business.address.locality_display') }}
                     </p>
                     <div class="d-flex justify-content-center justify-content-lg-start social-media-icons">
-                        <a href="https://www.facebook.com/PellegrinosCatering/" target="_blank" style="color: #3b5998">
+                        <a href="{{ config('business.social.facebook') }}" target="_blank" rel="noopener" aria-label="Facebook" style="color: #3b5998">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.instagram.com/pellegrino_s_comedores/" target="_blank" style="color: #E1306C">
+                        <a href="{{ config('business.social.instagram') }}" target="_blank" rel="noopener" aria-label="Instagram" style="color: #E1306C">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://wa.me/526643756259" target="_blank" style="color: #25d366">
+                        <a href="{{ config('business.social.whatsapp') }}" target="_blank" rel="noopener" aria-label="WhatsApp" data-track="click_whatsapp" style="color: #25d366">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -48,7 +48,7 @@
                     </h3>
                     <div class="d-flex justify-content-start justify-content-lg-start" style="position: relative; margin-bottom: 20px;">
                         <div class="d-flex align-items-center">
-                            <img src="{{ asset('img/quality_certificate.png') }}" alt="img" style="width: auto; height: 75px;">
+                            <img src="{{ asset('img/quality_certificate.png') }}" alt="{{ __('website.contact.certifications.title') }}" height="75" loading="lazy" style="width: auto; height: 75px;">
                         </div>
                         <div>
                         </div>
@@ -78,7 +78,7 @@
         <div class="row align-items-center">
             <div class="col-md-12 text-center">
                 <p>© <span class="copyright_year">
-                        2022 - {{ date('Y') }}</span> {{ env('APP_NAME') }}, {{ __('website.footer.rights') }}
+                        2022 - {{ date('Y') }}</span> {{ config('business.name') }}, {{ __('website.footer.rights') }}
                 </p>
                 <p class="small">
                     {{ __('website.footer.img_rights') }}

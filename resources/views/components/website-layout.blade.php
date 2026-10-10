@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ config('seo.locales.' . app()->getLocale() . '.html_lang') }}">
 <head>
-	<title>{{ env('APP_NAME') }}</title>
 	<meta charset="utf-8">
-	<!--[if IE]>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<![endif]-->
-	<meta name="description" content="Pellegrino's Comedores Industriales - Tu aliado culinario en el corazón industrial de Tijuana.">
-	<meta name="author" content="Pellegrino's Comedores Industriales">
-	<meta name="keywords" content="comedor industrial, catering, eventos, empresas, Tijuana, Baja California, México, comidas para empleados, industrial kitchen, vending saludable, healthy vending">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<x-seo-head />
+	<x-json-ld-business />
 
 	<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/favicon/apple-icon-57x57.png') }}">
 	<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img/favicon/apple-icon-60x60.png') }}">
@@ -29,20 +24,16 @@
 	<meta name="msapplication-TileImage" content="{{ asset('img/favicon/ms-icon-144x144.png') }}">
 	<meta name="theme-color" content="#ffffff">
 
-
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/animations.css">
-	<link rel="stylesheet" href="css/font-awesome.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
-	{!! NoCaptcha::renderJs() !!}
-	<script src="js/modernizr-2.6.2.min.js"></script>
-    <script src="https://kit.fontawesome.com/133291f590.js" crossorigin="anonymous"></script>
-	<!--[if lt IE 9]>
-		<script src="js/vendor/html5shiv.min.js"></script>
-		<script src="js/vendor/respond.min.js"></script>
-		<script src="js/vendor/jquery-1.12.4.min.js"></script>
-	<![endif]-->
+	<link rel="preload" as="image" href="{{ asset('img/portadas/slide1.webp') }}" fetchpriority="high">
+	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/animations.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/main.css') }}" class="color-switcher-link">
+	{!! NoCaptcha::renderJs(app()->getLocale()) !!}
+	<script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
+	<script src="https://kit.fontawesome.com/133291f590.js" crossorigin="anonymous" defer></script>
+	<x-analytics />
 </head>
 <body>
 	<div class="preloader">
@@ -55,7 +46,16 @@
 			<x-website-footer />
 		</div>
 	</div>
-	<script src="js/compressed.js"></script>
-	<script src="js/main.js"></script>
+	<script src="{{ asset('js/compressed.js') }}" defer></script>
+	<script src="{{ asset('js/main.js') }}" defer></script>
+	<script src="{{ asset('js/lazy-media.js') }}" defer></script>
+	<script src="{{ asset('js/tracking.js') }}" defer></script>
+	@if (session('lead_submitted'))
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				window.pellegrinosTrack('generate_lead', { form_name: 'contact' });
+			});
+		</script>
+	@endif
 </body>
 </html>

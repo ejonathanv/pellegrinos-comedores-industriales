@@ -17267,6 +17267,12 @@ body.active-side-header.slide-right .page_header_side {
 	min-height: 800px;
 }
 
+/* Reserva el alto del hero antes de que inicie flexslider para evitar saltos de layout */
+.page_slider .flexslider .slides > li:first-child {
+	display: block;
+	width: 100%;
+}
+
 @media (max-width: 1199px) {
 	.page_slider .flexslider .slides li {
 		min-height: 600px;
@@ -18778,7 +18784,7 @@ img.absolute_image {
 
 .header_absolute.cover-background,
 .header_absolute.s-parallax {
-	background-image: url("../images/video_section_background.jpg");
+	background-image: url("../images/video_section_background.webp");
 }
 
 .page_title.s-overlay::before {
@@ -18787,7 +18793,7 @@ img.absolute_image {
 
 .page_title.cover-background,
 .page_title.s-parallax {
-	background-image: url("../images/video_section_background.jpg");
+	background-image: url("../images/video_section_background.webp");
 }
 
 .page_title h1,
@@ -18914,7 +18920,7 @@ img.absolute_image {
 }
 
 .page_footer.s-parallax {
-	background-image: url("../images/video_section_background.jpg");
+	background-image: url("../images/video_section_background.webp");
 }
 
 .page_footer .side-icon-box {
@@ -18995,7 +19001,7 @@ img.absolute_image {
 
 .page_copyright.cover-background,
 .page_copyright.s-parallax {
-	background-image: url("../images/video_section_background.jpg");
+	background-image: url("../images/video_section_background.webp");
 }
 
 .item-hover-content {
@@ -19120,7 +19126,7 @@ img.absolute_image {
 }
 
 .section-about {
-	background: url("../images/bg-section-about.jpg") no-repeat center/cover;
+	background: url("../images/bg-section-about.webp") no-repeat center/cover;
 }
 
 @media (max-width: 991px) {
@@ -19134,7 +19140,7 @@ img.absolute_image {
 }
 
 .section-counter {
-	background: url("../images/bg-section-count.jpg") no-repeat center/cover;
+	background: url("../images/bg-section-count.webp") no-repeat center/cover;
 }
 
 .mailchimp-1 {

@@ -8,7 +8,7 @@
 	<x-website-clients />
 	<x-website-contact />
 
-	<a href="https://wa.me/526643756259" class="whatsapp-float" target="_blank">
+	<a href="{{ config('business.social.whatsapp') }}" class="whatsapp-float" target="_blank" rel="noopener" data-track="click_whatsapp">
 		<i class="fab fa-whatsapp"></i>
 		<span>
 			{{ __('website.contact.whatsapp') }}

@@ -1,10 +1,13 @@
+@php
+    $alternateLocale = \App\Support\Seo::alternateLocale();
+@endphp
 <div class="header_absolute ds cover-background ">
     <header class="page_header ds ms s-overlay">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-xl-2 col-lg-3 col-1">
-                    <a href="./" class="logo">
-                        <img src="{{ asset('img/pellegrinos_comedores_industriales_logo_blanco.svg') }}" alt="img">
+                    <a href="{{ \App\Support\Seo::url('home') }}" class="logo">
+                        <img src="{{ asset('img/pellegrinos_comedores_industriales_logo_blanco.svg') }}" alt="{{ config('business.name') }}" width="500" height="354">
                     </a>
                 </div>
                 <div class="col-xl-6 col-lg-5 col-4">
@@ -46,45 +49,37 @@
                     <!-- eof main nav -->
                 </div>
 
-                <!-- Aqui vamos a agregar un boton para cambiar el idioma del sitio -->
                 <div class="col-xl-2 col-lg-4 col-4 text-right">
-                    @if(session()->get('locale') && session()->get('locale') == 'es')
-                        <a href="{{ route('lang', 'en') }}">
-                            <i class="fa fa-globe"></i>
-                            <span class="d-none d-lg-inline">
-                                English
-                            </span>
-                        </a>
-                    @elseif(session()->get('locale') && session()->get('locale') == 'en')
-                        <a href="{{ route('lang', 'es') }}">
-                            <i class="fa fa-globe"></i>
-                            <span class="d-none d-lg-inline">
-                                Español
-                            </span>
-                        </a>
-                    @else
-                        <a href="{{ route('lang', 'en') }}">
-                            <i class="fa fa-globe"></i>
-                            <span class="d-none d-lg-inline">
-                                English
-                            </span>
-                        </a>
-                    @endif
+                    <a href="{{ \App\Support\Seo::url(\App\Support\Seo::currentPage(), $alternateLocale) }}"
+                        hreflang="{{ config("seo.locales.{$alternateLocale}.hreflang") }}"
+                        lang="{{ config("seo.locales.{$alternateLocale}.html_lang") }}">
+                        <i class="fa fa-globe"></i>
+                        <span class="d-none d-lg-inline">
+                            {{ $alternateLocale === 'en' ? 'English' : 'Español' }}
+                        </span>
+                    </a>
                 </div>
 
                 <div class="col-xl-2 col-lg-3 col-4 text-right d-none d-lg-block social-media-icons">
-                    <a href="https://www.facebook.com/PellegrinosCatering/" 
+                    <a href="{{ config('business.social.facebook') }}"
                         target="_blank"
+                        rel="noopener"
+                        aria-label="Facebook"
                         style="color: #6382c4">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/pellegrino_s_comedores/" 
+                    <a href="{{ config('business.social.instagram') }}"
                         target="_blank"
+                        rel="noopener"
+                        aria-label="Instagram"
                         style="color: #E66490">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/526643756259"
+                    <a href="{{ config('business.social.whatsapp') }}"
                         target="_blank"
+                        rel="noopener"
+                        aria-label="WhatsApp"
+                        data-track="click_whatsapp"
                         style="color: #25d366">
                         <i class="fab fa-whatsapp"></i>
                     </a>

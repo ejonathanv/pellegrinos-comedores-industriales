@@ -77,11 +77,8 @@ return [
 
     'contact' => [
         'address' => 'Dirección',
-        'address_value' => 'Ciudad Industrial 22444 Tijuana',
         'phone' => 'Teléfono',
-        'phone_value' => '+52 664 375 6259',
         'email' => 'Correo electrónico',
-        'email_value' => 'cateringpellegrinos@gmail.com',
         'title' => 'Contáctanos',
         'description' => '¿Tienes alguna pregunta o comentario? Nos encantaría saber de ti. Completa el formulario y te responderemos lo antes posible.',
         'form' => [

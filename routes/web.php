@@ -1,30 +1,27 @@
 <?php
 
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\LangMiddleware;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SeoController;
 use App\Http\Controllers\WebsiteController;
+use App\Http\Middleware\SetLocale;
+use App\Support\Seo;
+use Illuminate\Support\Facades\Route;
 
+foreach (Seo::locales() as $locale) {
+    Route::middleware(SetLocale::class . ':' . $locale)->group(function () use ($locale) {
+        foreach (config('seo.pages') as $page => $definition) {
+            Route::get(Seo::path($page, $locale), $definition['action'])
+                ->name(Seo::routeName($page, $locale));
+        }
+    });
+}
 
-Route::get('/setlocale/{locale}', function ($locale) {
-    App::setLocale($locale);
-    session()->put('locale', $locale);
-    return redirect()->back();
-})->name('lang');
+Route::get('/setlocale/{locale}', function (string $locale) {
+    return redirect(Seo::url('home', in_array($locale, Seo::locales(), true) ? $locale : config('seo.default_locale')), 301);
+});
 
-Route::get('/', [WebsiteController::class, 'index'])->name('website.index')->middleware(LangMiddleware::class);
+Route::get('/sitemap.xml', [SeoController::class, 'sitemap'])->name('sitemap');
+Route::get('/robots.txt', [SeoController::class, 'robots'])->name('robots');
 
-Route::post('/contact-to-pellegrinos', [WebsiteController::class, 'contactToPellegrinos'])->name('contact-to-pellegrinos');
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
-
-// require __DIR__.'/auth.php';
+Route::post('/contact-to-pellegrinos', [WebsiteController::class, 'contactToPellegrinos'])
+    ->middleware(SetLocale::class)
+    ->name('contact-to-pellegrinos');
