@@ -21,7 +21,8 @@
     <x-page-hero
         :title="__('industrial_dining.hero.title')"
         :subtitle="__('industrial_dining.hero.subtitle')"
-        :breadcrumb="__('industrial_dining.breadcrumb')">
+        :breadcrumb="__('industrial_dining.breadcrumb')"
+        image="img/portadas/comedor-industrial-hero.webp">
         <a href="#contact" class="btn btn-maincolor">{{ __('industrial_dining.hero.cta') }}</a>
     </x-page-hero>
 

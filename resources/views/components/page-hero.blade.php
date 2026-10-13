@@ -1,5 +1,6 @@
-@props(['title', 'breadcrumb', 'subtitle' => null])
-<section class="page_title ds s-overlay s-parallax page-hero">
+@props(['title', 'breadcrumb', 'subtitle' => null, 'image' => null])
+<section class="page_title ds s-overlay s-parallax page-hero"
+    @if ($image) style="background-image: url('{{ asset($image) }}');" @endif>
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">

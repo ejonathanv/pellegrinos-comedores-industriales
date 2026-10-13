@@ -19918,6 +19918,8 @@ img.absolute_image {
 /* Encabezado de páginas internas */
 .page-hero {
 	padding: 200px 0 60px;
+	background-size: cover;
+	background-position: center;
 }
 
 .page-hero h1 {
