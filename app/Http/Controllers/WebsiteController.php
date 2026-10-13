@@ -14,32 +14,32 @@ class WebsiteController extends Controller
         return view('website.index');
     }
 
+    public function industrialDining(){
+        return view('website.industrial-dining');
+    }
+
+    public function contact(){
+        return view('website.contact');
+    }
+
     public function contactToPellegrinos(ContactRequest $request){
-        $homeUrl = Seo::url('home') . '#contact';
+        $lead = collect($request->validated())
+            ->except('g-recaptcha-response')
+            ->put('source_page', $request->validated('source_page') ?? 'home')
+            ->put('locale', app()->getLocale())
+            ->all();
 
-        $validate = validator($request->all(), [
-            'g-recaptcha-response' => 'required|captcha'
-        ]);
+        // Correo de agradecimiento para quien solicita la cotización
+        Mail::to($lead['email'])->send(new ContactMail($lead));
 
-        if ($validate->fails()) {
-            return redirect($homeUrl)
-                ->with('error', 'Captcha is required');
-        }
+        // Aviso al equipo comercial con los datos de la solicitud
+        Mail::to(config('mail.contact_address'))->send(new NewContactMail($lead));
 
-        // Vamos a enviar un correo para agracer al usuario
-        $email = $request->email;
-        Mail::to($email)->send(new ContactMail($request));
-
-        // Vamos a enviar un mensaje a los administradores del sitio
-        $adminEmail = env('MAIL_CONTACT_ADDRESS');
-        Mail::to($adminEmail)->send(new NewContactMail($request));
-
-        $message = app()->getLocale() === 'es'
-            ? 'Tu mensaje ha sido enviado con éxito'
-            : 'Your message has been sent successfully';
-
-        return redirect($homeUrl)
-            ->with('success', $message)
-            ->with('lead_submitted', true);
+        return redirect(Seo::url($lead['source_page']) . '#contact')
+            ->with('success', __('website.quote.success'))
+            ->with('lead_submitted', [
+                'service' => $lead['service'],
+                'source_page' => $lead['source_page'],
+            ]);
     }
 }

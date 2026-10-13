@@ -1,47 +1,62 @@
 @php
-    $alternateLocale = \App\Support\Seo::alternateLocale();
+    $seo = \App\Support\Seo::class;
+    $alternateLocale = $seo::alternateLocale();
+    $currentPage = $seo::currentPage();
+    $homeUrl = $seo::url('home');
+
+    $contactUrl = $seo::url('contact');
+
+    $navItems = [
+        ['label' => __('website.nav.home'), 'url' => $homeUrl, 'active' => $currentPage === 'home'],
+        [
+            'label' => __('website.nav.services'),
+            'url' => $homeUrl . '#services',
+            'active' => $currentPage === 'industrial_dining',
+            'children' => [
+                ['label' => __('website.nav.industrial_dining'), 'url' => $seo::url('industrial_dining'), 'active' => $currentPage === 'industrial_dining'],
+                ['label' => __('website.quote.services.coffee-break'), 'url' => $contactUrl . '?servicio=coffee-break#contact', 'active' => false],
+                ['label' => __('website.quote.services.catering'), 'url' => $contactUrl . '?servicio=catering#contact', 'active' => false],
+            ],
+        ],
+        ['label' => __('website.nav.about'), 'url' => $homeUrl . '#about', 'active' => false],
+        ['label' => __('website.nav.clients'), 'url' => $homeUrl . '#clients', 'active' => false],
+        ['label' => __('website.nav.contact'), 'url' => $seo::url('contact'), 'active' => $currentPage === 'contact'],
+    ];
 @endphp
 <div class="header_absolute ds cover-background ">
     <header class="page_header ds ms s-overlay">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-xl-2 col-lg-3 col-1">
-                    <a href="{{ \App\Support\Seo::url('home') }}" class="logo">
+                    <a href="{{ $homeUrl }}" class="logo">
                         <img src="{{ asset('img/pellegrinos_comedores_industriales_logo_blanco.svg') }}" alt="{{ config('business.name') }}" width="500" height="354">
                     </a>
                 </div>
-                <div class="col-xl-6 col-lg-5 col-4">
+                <div class="col-xl-7 col-lg-5 col-4 header-nav-col">
                     <!-- main nav start -->
                     <nav class="top-nav">
                         <ul class="nav sf-menu">
-                            <li>
-                                <a href="#home">
-                                    {{ __('website.nav.home') }}
+                            @foreach ($navItems as $item)
+                            <li @class(['active' => $item['active']])>
+                                <a href="{{ $item['url'] }}" @if ($item['active'] && empty($item['children'])) aria-current="page" @endif>
+                                    {{ $item['label'] }}
                                 </a>
+                                @if (! empty($item['children']))
+                                <ul>
+                                    @foreach ($item['children'] as $child)
+                                    <li @class(['active' => $child['active']])>
+                                        <a href="{{ $child['url'] }}" @if ($child['active']) aria-current="page" @endif>
+                                            {{ $child['label'] }}
+                                        </a>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                                @endif
                             </li>
-                            <li>
-                                <a href="#about">
-                                    {{ __('website.nav.about') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#services">
-                                    {{ __('website.nav.services') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#gallery">
-                                    {{ __('website.nav.gallery') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#clients">
-                                    {{ __('website.nav.clients') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contact">
-                                    {{ __('website.nav.contact') }}
+                            @endforeach
+                            <li class="nav-quote">
+                                <a href="{{ $contactUrl }}" class="btn btn-maincolor nav-quote-btn">
+                                    {{ __('website.nav.quote') }}
                                 </a>
                             </li>
                         </ul>
@@ -49,8 +64,8 @@
                     <!-- eof main nav -->
                 </div>
 
-                <div class="col-xl-2 col-lg-4 col-4 text-right">
-                    <a href="{{ \App\Support\Seo::url(\App\Support\Seo::currentPage(), $alternateLocale) }}"
+                <div class="col-xl-1 col-lg-4 col-4 text-right">
+                    <a href="{{ $seo::url($currentPage, $alternateLocale) }}"
                         hreflang="{{ config("seo.locales.{$alternateLocale}.hreflang") }}"
                         lang="{{ config("seo.locales.{$alternateLocale}.html_lang") }}">
                         <i class="fa fa-globe"></i>
@@ -60,7 +75,7 @@
                     </a>
                 </div>
 
-                <div class="col-xl-2 col-lg-3 col-4 text-right d-none d-lg-block social-media-icons">
+                <div class="col-xl-2 col-lg-3 col-4 text-right d-none d-lg-block social-media-icons header-social-col">
                     <a href="{{ config('business.social.facebook') }}"
                         target="_blank"
                         rel="noopener"

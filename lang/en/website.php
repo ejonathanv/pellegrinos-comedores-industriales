@@ -3,11 +3,28 @@
 return [
     'nav' => [
         'home' => 'Home',
+        'industrial_dining' => 'Industrial Dining',
         'about' => 'About Us',
         'services' => 'Services',
         'gallery' => 'Gallery',
         'clients' => 'Clients',
         'contact' => 'Contact',
+        'quote' => 'Request a quote',
+        'breadcrumb' => 'Breadcrumb',
+    ],
+
+    'hero' => [
+        'title' => 'Industrial Dining Services in Tijuana for Companies',
+        'subtitle' => 'Industrial dining, coffee break and corporate catering solutions designed around the needs of your team.',
+        'cta_quote' => 'Request a quote',
+        'cta_services' => 'Explore services',
+    ],
+
+    'trust' => [
+        'local' => 'Local service from Ciudad Industrial, Tijuana',
+        'repse' => 'REPSE registered',
+        'training' => 'Staff with DC3 and hygienic food handling training',
+        'whatsapp' => 'Direct support via WhatsApp',
     ],
 
     'slider' => [
@@ -57,6 +74,8 @@ return [
             'title' => 'Catering for Events',
             'description' => 'Corporate event catering with fresh food delivery, on-site preparation, and cleanup included.',
         ],
+        'cta_more' => 'Learn more',
+        'cta_quote' => 'Quote this service',
     ],
 
     'galleries' => [
@@ -79,17 +98,6 @@ return [
         'address' => 'Address',
         'phone' => 'Phone',
         'email' => 'Email',
-        'title' => 'Get In Touch',
-        'description' => 'Do you have any questions or comments? We would love to hear from you. Please fill out the form below and we will get back to you as soon as possible.',
-        'form' => [
-            'firstName' => 'First Name',
-            'lastName' => 'Last Name',
-            'email' => 'Email',
-            'phone' => 'Phone',
-            'subject' => 'Subject',
-            'message' => 'Message',
-            'submit' => 'Submit',
-        ],
         'send_email' => 'Send Email',
         'whatsapp' => 'Contact us',
         'certifications' => [
@@ -98,6 +106,55 @@ return [
             'certification_one' => 'DC3: Certificate of competencies or labor skills',
             'certification_two' => 'Hygienic food handling by all our staff',
         ]
+    ],
+
+    'quote' => [
+        'title' => 'Request your quote',
+        'description' => 'Tell us how many people you serve and how your plant operates. With that information we can prepare a more useful proposal for your company.',
+        'fields' => [
+            'company' => 'Company',
+            'name' => 'Name',
+            'phone' => 'Phone or WhatsApp',
+            'email' => 'Email',
+            'service' => 'Service of interest',
+            'people' => 'Approximate number of people',
+            'shifts' => 'Shifts and schedules',
+            'location' => 'Service location',
+            'kitchen' => 'Do you have a kitchen or serving area?',
+            'event_date' => 'Event date',
+            'message' => 'Message',
+        ],
+        'placeholders' => [
+            'service' => 'Select a service',
+            'shifts' => 'E.g. 2 shifts: 6:00 to 14:00 and 14:00 to 22:00',
+            'location' => 'Neighborhood or industrial park',
+            'kitchen' => 'Select an option',
+            'message' => 'Any additional details we should know',
+        ],
+        'services' => [
+            'comedor' => 'Industrial dining',
+            'coffee-break' => 'Coffee break',
+            'catering' => 'Corporate catering',
+            'otro' => 'Other',
+        ],
+        'kitchen_options' => [
+            'si' => 'Yes',
+            'no' => 'No',
+            'no-se' => 'Not sure',
+        ],
+        'optional' => 'optional',
+        'submit' => 'Request a quote',
+        'success' => 'We received your request. We will contact you soon to prepare your proposal.',
+        'required_if' => 'The :attribute field is required for the selected service.',
+        'captcha' => 'Please verify that you are not a robot.',
+    ],
+
+    'contact_page' => [
+        'title' => 'Request a quote',
+        'intro' => 'We prepare industrial dining, coffee break and corporate catering proposals for companies in Tijuana.',
+        'direct' => 'Direct contact',
+        'direct_text' => 'If you prefer, write to us or call us directly.',
+        'whatsapp' => 'WhatsApp',
     ],
 
     'footer' => [

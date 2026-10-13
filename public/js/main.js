@@ -551,7 +551,8 @@ function documentReadyInit() {
 	$('.sf-menu a').on('click', function(){
 		var $this = $(this);
 		//If this is a local link or item with sumbenu - not toggling menu
-		if (($this.hasClass('sf-with-ul')) || !($this.attr('href').charAt(0) === '#')) {
+		var isSamePageAnchor = this.hash && this.pathname === window.location.pathname;
+		if (($this.hasClass('sf-with-ul')) || !isSamePageAnchor) {
 			return;
 		}
 		$this

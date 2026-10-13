@@ -1,3 +1,28 @@
+@php
+    $seo = \App\Support\Seo::class;
+    $contactUrl = $seo::url('contact');
+
+    $services = [
+        [
+            'key' => 'serviceOne',
+            'image' => 'images/img_1.webp',
+            'url' => $seo::url('industrial_dining'),
+            'cta' => __('website.services.cta_more'),
+        ],
+        [
+            'key' => 'serviceTwo',
+            'image' => 'images/img_5.webp',
+            'url' => $contactUrl . '?servicio=coffee-break#contact',
+            'cta' => __('website.services.cta_quote'),
+        ],
+        [
+            'key' => 'serviceThree',
+            'image' => 'images/img_4.webp',
+            'url' => $contactUrl . '?servicio=catering#contact',
+            'cta' => __('website.services.cta_quote'),
+        ],
+    ];
+@endphp
 <!-- Servicios -->
 <section id="services" class="ls ms s-py-90 s-py-xl-160">
     <div class="container-fluid">
@@ -5,11 +30,11 @@
             <div class="col-lg-6 col-xl-3 section-special small-section">
                 <div>
                     <div class="content-center">
-                        <h3 class="text-center text-lg-left mt-0 mb-2 color-darkgrey">
+                        <h2 class="text-center text-lg-left mt-0 mb-2 color-darkgrey section-heading">
                             <span>
                                 {{ __('website.services.title') }}
                             </span>
-                        </h3>
+                        </h2>
                         <p class="justify-text color-darkgrey fw-500">
                             <span>
                                 {{ __('website.services.description') }}
@@ -17,62 +42,36 @@
                         </p>
                         <div class="divider-35"></div>
                         <div class="owl-custom-nav hidden-below-lg">
-                            <a href="#" class="owl-prev"><i class="fa fa-chevron-left"></i></a>
-                            <a href="#" class="owl-next"><i class="fa fa-chevron-right"></i></a>
+                            <a href="#" class="owl-prev" aria-label="Anterior"><i class="fa fa-chevron-left"></i></a>
+                            <a href="#" class="owl-next" aria-label="Siguiente"><i class="fa fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-xl-9">
                 <div class="quote-carousel owl-carousel" data-margin="60" data-responsive-xl="2" data-responsive-ml="2" data-responsive-lg="2" data-responsive-md="1" data-responsive-sm="2" data-responsive-xs="1" data-dots="false" data-loop="true" data-autoplay="true">
-                    <!-- Comedor Industrial -->
+                    @foreach ($services as $service)
                     <div class="vertical-item service-layout-1 ls">
                         <div class="item-media">
-                            <img src="{{ asset('images/img_1.webp') }}" alt="{{ __('website.services.serviceOne.title') }}" width="800" height="600" loading="lazy">
+                            <a href="{{ $service['url'] }}" tabindex="-1">
+                                <img src="{{ asset($service['image']) }}" alt="{{ __("website.services.{$service['key']}.title") }}" width="800" height="600" loading="lazy">
+                            </a>
                         </div>
                         <div class="item-content">
                             <div class="item-content-wrap">
-                                <h5 class="mt-1">
-                                    {{ __('website.services.serviceOne.title') }}
-                                </h5>
+                                <h3 class="mt-1 service-card-title">
+                                    <a href="{{ $service['url'] }}">{{ __("website.services.{$service['key']}.title") }}</a>
+                                </h3>
                                 <p class="justify-text">
-                                    {{ __('website.services.serviceOne.description') }}
+                                    {{ __("website.services.{$service['key']}.description") }}
                                 </p>
+                                <a href="{{ $service['url'] }}" class="btn btn-maincolor btn-small service-card-cta">
+                                    {{ $service['cta'] }}
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <!-- Coffee break -->
-                    <div class="vertical-item service-layout-1 ls">
-                        <div class="item-media">
-                            <img src="{{ asset('images/img_5.webp') }}" alt="{{ __('website.services.serviceTwo.title') }}" width="800" height="600" loading="lazy">
-                        </div>
-                        <div class="item-content">
-                            <div class="item-content-wrap">
-                                <h5 class="mt-1">
-                                    {{ __('website.services.serviceTwo.title') }}
-                                </h5>
-                                <p class="justify-text">
-                                    {{ __('website.services.serviceTwo.description') }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Catering para eventos -->
-                    <div class="vertical-item service-layout-1 ls">
-                        <div class="item-media">
-                            <img src="{{ asset('images/img_4.webp') }}" alt="{{ __('website.services.serviceThree.title') }}" width="800" height="600" loading="lazy">
-                        </div>
-                        <div class="item-content">
-                            <div class="item-content-wrap">
-                                <h5 class="mt-1">
-                                    {{ __('website.services.serviceThree.title') }}
-                                </h5>
-                                <p class="justify-text">
-                                    {{ __('website.services.serviceThree.description') }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

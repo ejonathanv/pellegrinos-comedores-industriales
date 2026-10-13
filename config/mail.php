@@ -100,4 +100,7 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    // Buzón del equipo comercial que recibe las solicitudes de cotización.
+    'contact_address' => env('MAIL_CONTACT_ADDRESS', env('MAIL_FROM_ADDRESS')),
+
 ];

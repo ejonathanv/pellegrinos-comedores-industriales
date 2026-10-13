@@ -3,11 +3,28 @@
 return [
     'nav' => [
         'home' => 'Inicio',
+        'industrial_dining' => 'Comedores industriales',
         'about' => 'Nosotros',
         'services' => 'Servicios',
         'gallery' => 'Galería',
         'clients' => 'Clientes',
         'contact' => 'Contacto',
+        'quote' => 'Solicitar cotización',
+        'breadcrumb' => 'Ruta de navegación',
+    ],
+
+    'hero' => [
+        'title' => 'Comedores industriales en Tijuana para empresas',
+        'subtitle' => 'Soluciones de comedor, coffee break y catering corporativo diseñadas para las necesidades de tu equipo.',
+        'cta_quote' => 'Solicitar cotización',
+        'cta_services' => 'Conocer servicios',
+    ],
+
+    'trust' => [
+        'local' => 'Servicio local desde Ciudad Industrial, Tijuana',
+        'repse' => 'Contamos con registro REPSE',
+        'training' => 'Personal con DC3 y manejo higiénico de alimentos',
+        'whatsapp' => 'Atención directa por WhatsApp',
     ],
 
     'slider' => [
@@ -57,6 +74,8 @@ return [
             'title' => 'Catering para eventos',
             'description' => 'Catering para eventos corporativos con entrega de alimentos frescos, preparación en el lugar y limpieza incluidas.',
         ],
+        'cta_more' => 'Conocer el servicio',
+        'cta_quote' => 'Cotizar este servicio',
     ],
 
     'galleries' => [
@@ -79,17 +98,6 @@ return [
         'address' => 'Dirección',
         'phone' => 'Teléfono',
         'email' => 'Correo electrónico',
-        'title' => 'Contáctanos',
-        'description' => '¿Tienes alguna pregunta o comentario? Nos encantaría saber de ti. Completa el formulario y te responderemos lo antes posible.',
-        'form' => [
-            'firstName' => 'Nombre',
-            'lastName' => 'Apellido',
-            'email' => 'Correo Electrónico',
-            'phone' => 'Teléfono',
-            'subject' => 'Asunto',
-            'message' => 'Mensaje',
-            'submit' => 'Enviar',
-        ],
         'send_email' => 'Enviar correo electrónico',
         'whatsapp' => 'Contáctanos',
         'certifications' => [
@@ -98,6 +106,55 @@ return [
             'certification_one' => 'DC3: Constancia de competencias o de habilidades laborales',
             'certification_two' => 'Manejo higiénico de los alimentos de todo nuestro personal',
         ]
+    ],
+
+    'quote' => [
+        'title' => 'Solicita tu cotización',
+        'description' => 'Cuéntanos cuántas personas atiendes y cómo opera tu planta. Con esos datos podremos preparar una propuesta más útil para tu empresa.',
+        'fields' => [
+            'company' => 'Empresa',
+            'name' => 'Nombre',
+            'phone' => 'Teléfono o WhatsApp',
+            'email' => 'Correo electrónico',
+            'service' => 'Servicio de interés',
+            'people' => 'Número aproximado de personas',
+            'shifts' => 'Turnos y horarios',
+            'location' => 'Ubicación del servicio',
+            'kitchen' => '¿Cuentan con cocina o área de servicio?',
+            'event_date' => 'Fecha del evento',
+            'message' => 'Mensaje',
+        ],
+        'placeholders' => [
+            'service' => 'Selecciona un servicio',
+            'shifts' => 'Ej. 2 turnos: 6:00 a 14:00 y 14:00 a 22:00',
+            'location' => 'Colonia o parque industrial',
+            'kitchen' => 'Selecciona una opción',
+            'message' => 'Cualquier detalle adicional que debamos conocer',
+        ],
+        'services' => [
+            'comedor' => 'Comedor industrial',
+            'coffee-break' => 'Coffee break',
+            'catering' => 'Catering corporativo',
+            'otro' => 'Otro',
+        ],
+        'kitchen_options' => [
+            'si' => 'Sí',
+            'no' => 'No',
+            'no-se' => 'No sé',
+        ],
+        'optional' => 'opcional',
+        'submit' => 'Solicitar cotización',
+        'success' => 'Recibimos tu solicitud. Te contactaremos pronto para preparar tu propuesta.',
+        'required_if' => 'El campo :attribute es obligatorio para el servicio seleccionado.',
+        'captcha' => 'Por favor verifica que no eres un robot.',
+    ],
+
+    'contact_page' => [
+        'title' => 'Solicita una cotización',
+        'intro' => 'Preparamos propuestas de comedor industrial, coffee break y catering corporativo para empresas en Tijuana.',
+        'direct' => 'Contacto directo',
+        'direct_text' => 'Si prefieres, escríbenos o llámanos directamente.',
+        'whatsapp' => 'WhatsApp',
     ],
 
     'footer' => [

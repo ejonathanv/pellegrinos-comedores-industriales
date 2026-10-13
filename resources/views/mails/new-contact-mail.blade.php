@@ -1,15 +1,34 @@
+@php
+    $labels = __('website.quote.fields', [], 'es');
+    $rows = [
+        $labels['company'] => $lead['company'],
+        $labels['name'] => $lead['name'],
+        $labels['phone'] => $lead['phone'],
+        $labels['email'] => $lead['email'],
+        $labels['service'] => __('website.quote.services.' . $lead['service'], [], 'es'),
+        $labels['people'] => $lead['people'],
+        $labels['shifts'] => $lead['shifts'] ?? null,
+        $labels['location'] => $lead['location'],
+        $labels['kitchen'] => isset($lead['kitchen']) ? __('website.quote.kitchen_options.' . $lead['kitchen'], [], 'es') : null,
+        $labels['event_date'] => $lead['event_date'] ?? null,
+        $labels['message'] => $lead['message'] ?? null,
+        'Página de origen' => \App\Support\Seo::url($lead['source_page'], $lead['locale']),
+        'Idioma' => $lead['locale'] === 'es' ? 'Español' : 'Inglés',
+    ];
+@endphp
 <x-mail::message>
-# Hola equipo de {{ config('app.name') }}
+# Nueva solicitud de cotización
 
-Se ha recibido un nuevo mensaje de contacto. A continuación se detallan los datos del contacto:
+Se recibió una solicitud desde el sitio web. Puedes responder directamente a este correo para contestarle a {{ $lead['name'] }}.
 
-- Nombre: {{ $request->firstName }} {{ $request->lastName }}
-- Correo electrónico: {{ $request->email }}
-- Teléfono: {{ $request->phone }}
-- Asunto: {{ $request->subject }}
-- Mensaje: {{ $request->message }}
-
-¡Revisa el mensaje y responde lo antes posible!
+<x-mail::table>
+| Dato | Valor |
+|:-----|:------|
+@foreach ($rows as $label => $value)
+@continue(blank($value))
+| {{ $label }} | {{ str_replace(["\r\n", "\n", '|'], [' ', ' ', '/'], $value) }} |
+@endforeach
+</x-mail::table>
 
 Saludos,<br>
 {{ config('app.name') }}

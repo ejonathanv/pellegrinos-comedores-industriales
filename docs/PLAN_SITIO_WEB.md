@@ -104,9 +104,9 @@ Las páginas, sus rutas por idioma, títulos y descripciones se definen en `conf
 ### Datos estructurados
 
 - [x] JSON-LD `LocalBusiness` con datos reales (nombre, teléfono, correo, dirección, área de servicio, redes). El horario se agrega al validarlo en la Fase 1.
-- [ ] JSON-LD `Service` en cada página de servicio (Fase 3).
-- [ ] JSON-LD `BreadcrumbList` en páginas internas (Fase 3).
-- [ ] JSON-LD `FAQPage` donde haya preguntas frecuentes (Fase 3).
+- [x] JSON-LD `Service` en cada página de servicio (Fase 3, comedores industriales).
+- [x] JSON-LD `BreadcrumbList` en páginas internas (Fase 3).
+- [x] JSON-LD `FAQPage` donde haya preguntas frecuentes (Fase 3).
 - [ ] Validar con la prueba de resultados enriquecidos de Google (requiere el sitio publicado).
 
 ### Rendimiento móvil
@@ -139,7 +139,7 @@ Lighthouse móvil en local (`php artisan serve`, sin compresión ni caché):
 - [x] Evento: clic en WhatsApp (`click_whatsapp`).
 - [x] Evento: clic en teléfono (`click_phone`) y correo (`click_email`).
 - [x] Evento: envío de formulario (`generate_lead`, al enviarse con éxito).
-- [ ] Evento: servicio de interés elegido en el formulario (Fase 3).
+- [x] Evento: servicio de interés elegido en el formulario (`service` y `source_page` en `generate_lead`).
 - [x] Registrar la página de origen en cada evento (`page_path` y `page_language`).
 
 ---
@@ -163,45 +163,47 @@ Pasar de una sola página con anclas a URLs por intención de búsqueda. Cada p�
 
 Cada página existe también en inglés bajo `/en/` (ver la sección Idioma de la Fase 2).
 
-- [ ] Crear rutas y controlador para páginas internas en Laravel, en español y en inglés.
-- [ ] Layout común con header, footer y navegación hacia las nuevas URLs (no solo anclas).
-- [ ] Migas de pan (breadcrumbs) en páginas internas.
+- [x] Crear rutas y controlador para páginas internas en Laravel, en español y en inglés (`industrial_dining` y `contact` en `config/seo.php`).
+- [x] Layout común con header, footer y navegación hacia las nuevas URLs (no solo anclas), con botón **Solicitar cotización**.
+- [x] Migas de pan (breadcrumbs) en páginas internas, con JSON-LD `BreadcrumbList`.
+- [x] Página `/contacto` (`/en/contact`) con formulario y contacto directo.
 
 ### Inicio
 
-- [ ] Nuevo hero en español: "Comedores industriales en Tijuana para empresas que necesitan una operación de alimentos confiable. Diseñamos soluciones de comedor, coffee break y catering corporativo de acuerdo con las necesidades de tu equipo." Botón: **Solicitar cotización**.
-- [ ] Texto de confianza cerca del inicio: "Servicio local desde Ciudad Industrial, Tijuana. Conoce nuestro proceso, instalaciones y respaldos antes de solicitar tu propuesta." Enlaces: **Ver certificaciones** y **Conocer servicios**.
-- [ ] Subir la prueba de confianza (REPSE, capacitación, clientes) cerca del inicio en lugar de solo en el footer.
-- [ ] Tarjetas de servicio que enlacen a su página propia.
+- [x] Nuevo hero con `h1` "Comedores industriales en Tijuana para empresas", subtítulo y botones **Solicitar cotización** y **Conocer servicios**.
+- [ ] Texto de confianza con enlace **Ver certificaciones** (cuando exista `/nosotros-y-certificaciones`).
+- [x] Franja de confianza debajo del hero: Ciudad Industrial, REPSE, DC3 y manejo higiénico, WhatsApp.
+- [x] Tarjetas de servicio enlazadas: comedor a su landing; coffee break y catering al formulario con el servicio preseleccionado (hasta tener página propia en la Fase 4).
 
 ### Landing `/comedores-industriales-tijuana`
 
-Título sugerido: *Comedores industriales en Tijuana para empresas | Pellegrino's*
+Título: *Comedores industriales en Tijuana para empresas | Pellegrino's*. Textos en `lang/es|en/industrial_dining.php`, redactados sin cifras ni promesas no validadas; ajustar al cerrar la Fase 1.
 
-- [ ] Encabezado: servicio, ubicación, beneficio y siguiente paso.
-- [ ] Prueba inmediata: Ciudad Industrial Tijuana, atención por WhatsApp, REPSE y capacitación verificable.
-- [ ] Problemas que resuelve: menos salidas durante el turno, logística ordenada, servicio estructurado.
-- [ ] Qué incluye: diagnóstico, propuesta de menú, operación acordada, atención y seguimiento (ajustar a lo que realmente se ofrece).
-- [ ] Proceso: conocemos tu operación, proponemos el servicio, acordamos el alcance y acompañamos el arranque.
-- [ ] Prueba social: caso o testimonio autorizado.
-- [ ] Preguntas frecuentes: turnos nocturnos, operación en sitio, información necesaria para cotizar.
-- [ ] Formulario calificado.
+- [x] Encabezado: servicio, ubicación, beneficio y siguiente paso.
+- [x] Prueba inmediata: Ciudad Industrial Tijuana, atención por WhatsApp, REPSE y capacitación verificable.
+- [x] Problemas que resuelve: menos salidas durante el turno, logística ordenada, servicio estructurado.
+- [x] Qué incluye: diagnóstico, propuesta de menú, operación acordada, atención y seguimiento (validar con el cliente).
+- [x] Proceso: conocemos tu operación, proponemos el servicio, acordamos el alcance y acompañamos el arranque.
+- [ ] Prueba social: caso o testimonio autorizado (depende de la Fase 1).
+- [x] Preguntas frecuentes con JSON-LD `FAQPage`: información para cotizar, turnos, operación en sitio y tiempo de propuesta.
+- [x] Formulario calificado con "Comedor industrial" preseleccionado.
+- [x] JSON-LD `Service` enlazado al `LocalBusiness`.
 
 ### Formulario de cotización calificado
 
 Texto de llamada a la acción: "Cuéntanos cuántas personas atiendes y cómo opera tu planta. Con esos datos podremos preparar una propuesta más útil para tu empresa."
 
-- [ ] Empresa y nombre (obligatorio).
-- [ ] Teléfono o WhatsApp y correo (obligatorio).
-- [ ] Servicio de interés: comedor industrial, catering o coffee break (obligatorio).
-- [ ] Número aproximado de comensales o asistentes (obligatorio).
-- [ ] Turnos y horarios (obligatorio para comedor).
-- [ ] Ubicación del servicio (obligatorio).
-- [ ] ¿Cuentan con cocina o área de servicio? (recomendado).
-- [ ] Fecha del evento (obligatorio para catering y coffee break).
-- [ ] Campos condicionales según el servicio elegido.
-- [ ] Actualizar `ContactRequest`, correos de notificación y confirmación con los nuevos campos.
-- [ ] Guardar la landing de origen en la solicitud.
+- [x] Empresa y nombre (obligatorio).
+- [x] Teléfono o WhatsApp y correo (obligatorio).
+- [x] Servicio de interés: comedor industrial, catering o coffee break (obligatorio).
+- [x] Número aproximado de comensales o asistentes (obligatorio).
+- [x] Turnos y horarios (obligatorio para comedor).
+- [x] Ubicación del servicio (obligatorio).
+- [x] ¿Cuentan con cocina o área de servicio? (recomendado).
+- [x] Fecha del evento (obligatorio para catering y coffee break).
+- [x] Campos condicionales según el servicio elegido (`public/js/quote-form.js`).
+- [x] Actualizar `ContactRequest`, correos de notificación y confirmación con los nuevos campos.
+- [x] Guardar la landing de origen en la solicitud (`source_page`, incluida en el correo y en el evento `generate_lead`).
 
 ---
 

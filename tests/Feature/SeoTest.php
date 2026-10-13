@@ -12,7 +12,8 @@ class SeoTest extends TestCase
 
         $response->assertOk()
             ->assertSee('<html lang="es-MX">', false)
-            ->assertSee('<title>Comedores industriales en Tijuana para empresas', false)
+            ->assertSee('<title>Comedor industrial, coffee break y catering en Tijuana', false)
+            ->assertSee('<h1 class="hero-title">', false)
             ->assertSee('<link rel="canonical" href="http://localhost/">', false)
             ->assertSee('<meta property="og:locale" content="es_MX">', false)
             ->assertSee('Solicita tu cotización')
@@ -25,7 +26,7 @@ class SeoTest extends TestCase
 
         $response->assertOk()
             ->assertSee('<html lang="en">', false)
-            ->assertSee('<title>Industrial Dining Services in Tijuana', false)
+            ->assertSee('<title>Industrial Dining, Coffee Break and Catering in Tijuana', false)
             ->assertSee('<link rel="canonical" href="http://localhost/en">', false)
             ->assertSee('<meta property="og:locale" content="en_US">', false)
             ->assertSee('Our Services');
@@ -86,6 +87,62 @@ class SeoTest extends TestCase
         config(['services.google.analytics_id' => 'G-TEST123']);
 
         $this->get('/')->assertSee('googletagmanager.com/gtag/js?id=G-TEST123', false);
+    }
+
+    public function test_internal_pages_respond_in_both_languages_with_their_own_seo(): void
+    {
+        $pages = [
+            '/comedores-industriales-tijuana' => ['es-MX', 'http://localhost/en/industrial-dining-tijuana'],
+            '/en/industrial-dining-tijuana' => ['en', 'http://localhost/comedores-industriales-tijuana'],
+            '/contacto' => ['es-MX', 'http://localhost/en/contact'],
+            '/en/contact' => ['en', 'http://localhost/contacto'],
+        ];
+
+        foreach ($pages as $path => [$lang, $alternate]) {
+            $this->get($path)
+                ->assertOk()
+                ->assertSee('<html lang="' . $lang . '">', false)
+                ->assertSee('<link rel="canonical" href="http://localhost' . $path . '">', false)
+                ->assertSee('href="' . $alternate . '"', false)
+                ->assertSee('<h1>', false)
+                ->assertSee('class="breadcrumb"', false);
+        }
+    }
+
+    public function test_menu_links_to_new_pages_and_marks_the_active_one(): void
+    {
+        $this->get('/')
+            ->assertSee('href="http://localhost/comedores-industriales-tijuana"', false)
+            ->assertSee('href="http://localhost/contacto"', false)
+            ->assertSee('href="http://localhost/#about"', false);
+
+        $this->get('/comedores-industriales-tijuana')
+            ->assertSee('aria-current="page"', false);
+    }
+
+    public function test_sitemap_lists_new_pages(): void
+    {
+        $this->get('/sitemap.xml')
+            ->assertSee('<loc>http://localhost/comedores-industriales-tijuana</loc>', false)
+            ->assertSee('<loc>http://localhost/en/industrial-dining-tijuana</loc>', false)
+            ->assertSee('<loc>http://localhost/contacto</loc>', false)
+            ->assertSee('<loc>http://localhost/en/contact</loc>', false);
+    }
+
+    public function test_industrial_dining_page_includes_structured_data(): void
+    {
+        $this->get('/comedores-industriales-tijuana')
+            ->assertSee('"@type":"Service"', false)
+            ->assertSee('"@id":"http://localhost/#business"', false)
+            ->assertSee('"@type":"FAQPage"', false)
+            ->assertSee('"@type":"BreadcrumbList"', false)
+            ->assertSee('<option value="comedor" selected', false);
+    }
+
+    public function test_service_query_preselects_the_quote_form(): void
+    {
+        $this->get('/contacto?servicio=catering')
+            ->assertSee('<option value="catering" selected', false);
     }
 
     public function test_site_verification_meta_uses_env_value(): void

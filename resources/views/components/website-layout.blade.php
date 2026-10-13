@@ -24,7 +24,9 @@
 	<meta name="msapplication-TileImage" content="{{ asset('img/favicon/ms-icon-144x144.png') }}">
 	<meta name="theme-color" content="#ffffff">
 
+	@if (\App\Support\Seo::currentPage() === 'home')
 	<link rel="preload" as="image" href="{{ asset('img/portadas/slide1.webp') }}" fetchpriority="high">
+	@endif
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/animations.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
@@ -46,14 +48,19 @@
 			<x-website-footer />
 		</div>
 	</div>
+	<a href="{{ config('business.social.whatsapp') }}" class="whatsapp-float" target="_blank" rel="noopener" data-track="click_whatsapp">
+		<i class="fab fa-whatsapp" aria-hidden="true"></i>
+		<span>{{ __('website.contact.whatsapp') }}</span>
+	</a>
 	<script src="{{ asset('js/compressed.js') }}" defer></script>
 	<script src="{{ asset('js/main.js') }}" defer></script>
 	<script src="{{ asset('js/lazy-media.js') }}" defer></script>
 	<script src="{{ asset('js/tracking.js') }}" defer></script>
+	<script src="{{ asset('js/quote-form.js') }}" defer></script>
 	@if (session('lead_submitted'))
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
-				window.pellegrinosTrack('generate_lead', { form_name: 'contact' });
+				window.pellegrinosTrack('generate_lead', @json(['form_name' => 'quote'] + (array) session('lead_submitted')));
 			});
 		</script>
 	@endif

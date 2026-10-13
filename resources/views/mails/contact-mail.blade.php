@@ -1,20 +1,26 @@
-
-@if($locale == 'en')
+@php
+    $service = __('website.quote.services.' . $lead['service']);
+@endphp
+@if ($locale === 'en')
 <x-mail::message>
-# Hello {{ $request->firstName }}
+# Hello {{ $lead['name'] }}
 
-Thank you for contacting us. We will respond to your message as soon as possible.
+Thank you for requesting a quote for **{{ $service }}** for {{ $lead['company'] }}. We will review your information and contact you soon to prepare your proposal.
 
-Greetings,<br>
-{{ config('app.name') }}
+If you need to add anything, simply reply to this email or write to us on [WhatsApp]({{ config('business.social.whatsapp') }}).
+
+Best regards,<br>
+{{ config('business.name') }}
 </x-mail::message>
-@elseif($locale == 'es')
+@else
 <x-mail::message>
-# Hola {{ $request->firstName }}
+# Hola {{ $lead['name'] }}
 
-Gracias por contactarnos. Responderemos a tu mensaje lo antes posible.
+Gracias por solicitar una cotización de **{{ $service }}** para {{ $lead['company'] }}. Revisaremos tu información y te contactaremos pronto para preparar tu propuesta.
 
-Gracias,<br>
-{{ config('app.name') }}
+Si necesitas agregar algo, responde a este correo o escríbenos por [WhatsApp]({{ config('business.social.whatsapp') }}).
+
+Saludos,<br>
+{{ config('business.name') }}
 </x-mail::message>
 @endif

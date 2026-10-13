@@ -3,8 +3,8 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
@@ -13,29 +13,24 @@ class NewContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $request;
+    public array $lead;
 
-    /**
-     * Create a new message instance.
-     */
-    public function __construct($request)
+    public function __construct(array $lead)
     {
-        $this->request = $request;
+        $this->lead = $lead;
+        $this->locale = 'es';
     }
 
-    /**
-     * Get the message envelope.
-     */
     public function envelope(): Envelope
     {
+        $service = __('website.quote.services.' . $this->lead['service'], [], 'es');
+
         return new Envelope(
-            subject: 'Nuevo mensaje de contacto',
+            replyTo: [new Address($this->lead['email'], $this->lead['name'])],
+            subject: "Nueva solicitud de cotización: {$service} - {$this->lead['company']}",
         );
     }
 
-    /**
-     * Get the message content definition.
-     */
     public function content(): Content
     {
         return new Content(
@@ -44,8 +39,6 @@ class NewContactMail extends Mailable
     }
 
     /**
-     * Get the attachments for the message.
-     *
      * @return array<int, \Illuminate\Mail\Mailables\Attachment>
      */
     public function attachments(): array

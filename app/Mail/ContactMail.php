@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -13,39 +12,23 @@ class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $request;
-    public $locale;
+    public array $lead;
 
-    /**
-     * Create a new message instance.
-     */
-    public function __construct($request)
+    public function __construct(array $lead)
     {
-        $this->request = $request;
-        $this->locale = app()->getLocale();
+        $this->lead = $lead;
+        $this->locale = $lead['locale'] ?? app()->getLocale();
     }
 
-    /**
-     * Get the message envelope.
-     */
     public function envelope(): Envelope
     {
-        // Si la sesion es "es" entonces el subject sera "Gracias por contactarnos - Pellegrinos Comedores Industriales"
-        if($this->locale == 'es'){
-            return new Envelope(
-                subject: 'Gracias por contactarnos - Pellegrinos Comedores Industriales',
-            );
-        }
+        $subject = $this->locale === 'es'
+            ? "Recibimos tu solicitud de cotización - Pellegrino's Comedores Industriales"
+            : "We received your quote request - Pellegrino's Comedores Industriales";
 
-        // Si la sesion es "en" entonces el subject sera "Contact Mail"
-        return new Envelope(
-            subject: 'Thank you for contacting us - Pellegrinos Comedores Industriales',
-        );
+        return new Envelope(subject: $subject);
     }
 
-    /**
-     * Get the message content definition.
-     */
     public function content(): Content
     {
         return new Content(
@@ -54,8 +37,6 @@ class ContactMail extends Mailable
     }
 
     /**
-     * Get the attachments for the message.
-     *
      * @return array<int, \Illuminate\Mail\Mailables\Attachment>
      */
     public function attachments(): array

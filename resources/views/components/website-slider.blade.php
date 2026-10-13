@@ -3,7 +3,7 @@
     <div class="flexslider">
         <ul class="slides">
             <li class="ds cover-image text-center text-lg-left">
-                <img src="{{ asset('img/portadas/slide1.webp') }}" alt="{{ __('website.slider.one.description') }}" width="1600" height="833" fetchpriority="high">
+                <img src="{{ asset('img/portadas/slide1.webp') }}" alt="{{ __('website.hero.title') }}" width="1600" height="833" fetchpriority="high">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -11,12 +11,23 @@
                                 <div class="intro_layers">
                                     <div class="intro_layer" data-animation="fadeInRight">
                                         <div class="divider-90"></div>
-                                        <div class="d-inline-block text-center">
-                                            <img src="{{ asset('img/pellegrinos_comedores_industriales_logo_blanco.svg') }}" alt="{{ config('business.name') }}" style="width: 500px; height: auto; display: inline-block !important; margin-bottom: 3rem">
+                                        <div class="d-inline-block text-center hero-main">
+                                            <img src="{{ asset('img/pellegrinos_comedores_industriales_logo_blanco.svg') }}" alt="{{ config('business.name') }}" class="hero-logo" width="500" height="354">
 
-                                            <h4>
-                                                {{ __('website.slider.one.description') }}
-                                            </h4>
+                                            <h1 class="hero-title">
+                                                {{ __('website.hero.title') }}
+                                            </h1>
+                                            <p class="hero-subtitle">
+                                                {{ __('website.hero.subtitle') }}
+                                            </p>
+                                            <div class="hero-actions">
+                                                <a href="{{ \App\Support\Seo::url('contact') }}" class="btn btn-maincolor">
+                                                    {{ __('website.hero.cta_quote') }}
+                                                </a>
+                                                <a href="#services" class="btn btn-outline-light">
+                                                    {{ __('website.hero.cta_services') }}
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
