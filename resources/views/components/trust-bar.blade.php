@@ -13,9 +13,9 @@
                 <li>
                     <i class="{{ ($item['brand'] ?? false) ? 'fab' : 'fas' }} {{ $item['icon'] }}" aria-hidden="true"></i>
                     @isset($item['url'])
-                        <a href="{{ $item['url'] }}" target="_blank" rel="noopener" data-track="click_whatsapp">{{ $item['text'] }}</a>
+                        <a href="{{ $item['url'] }}" target="_blank" rel="noopener" data-track="click_whatsapp">{!! nl2br(e($item['text']), false) !!}</a>
                     @else
-                        <span>{{ $item['text'] }}</span>
+                        <span>{!! nl2br(e($item['text']), false) !!}</span>
                     @endisset
                 </li>
             @endforeach

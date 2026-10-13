@@ -21,10 +21,10 @@ return [
     ],
 
     'trust' => [
-        'local' => 'Servicio local desde Ciudad Industrial, Tijuana',
-        'repse' => 'Contamos con registro REPSE',
-        'training' => 'Personal con DC3 y manejo higiénico de alimentos',
-        'whatsapp' => 'Atención directa por WhatsApp',
+        'local' => "Servicio local desde\nCiudad Industrial, Tijuana",
+        'repse' => "Contamos con\nregistro REPSE",
+        'training' => "Personal con DC3 y\nmanejo higiénico de alimentos",
+        'whatsapp' => "Atención directa\npor WhatsApp",
     ],
 
     'slider' => [

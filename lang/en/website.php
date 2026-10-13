@@ -21,10 +21,10 @@ return [
     ],
 
     'trust' => [
-        'local' => 'Local service from Ciudad Industrial, Tijuana',
-        'repse' => 'REPSE registered',
-        'training' => 'Staff with DC3 and hygienic food handling training',
-        'whatsapp' => 'Direct support via WhatsApp',
+        'local' => "Local service from\nCiudad Industrial, Tijuana",
+        'repse' => "REPSE\nregistered",
+        'training' => "Staff with DC3 and\nhygienic food handling training",
+        'whatsapp' => "Direct support\nvia WhatsApp",
     ],
 
     'slider' => [
