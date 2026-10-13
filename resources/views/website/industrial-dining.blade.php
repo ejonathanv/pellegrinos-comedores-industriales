@@ -57,9 +57,9 @@
         </div>
     </section>
 
-    <section class="ls s-py-60 s-py-xl-90 landing-section">
+    <section class="ds s-py-60 s-py-xl-90 landing-section landing-section-dark">
         <div class="container">
-            <h2 class="text-center color-darkgrey">{{ __('industrial_dining.includes.title') }}</h2>
+            <h2 class="text-center">{{ __('industrial_dining.includes.title') }}</h2>
             <div class="row">
                 @foreach (__('industrial_dining.includes.items') as $item)
                     <div class="col-md-6 col-lg-3 mb-4">

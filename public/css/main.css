@@ -19949,6 +19949,21 @@ img.absolute_image {
 	margin-bottom: 0;
 }
 
+/* Sección oscura con el mismo fondo del header */
+.landing-section-dark h2,
+.landing-section-dark .landing-card h3 {
+	color: #ffffff;
+}
+
+.landing-section-dark .landing-card {
+	background-color: #2f2f2f;
+	box-shadow: none;
+}
+
+.landing-section-dark .landing-card p {
+	color: #d0d0d0;
+}
+
 .process-steps {
 	counter-reset: step;
 	list-style: none;
