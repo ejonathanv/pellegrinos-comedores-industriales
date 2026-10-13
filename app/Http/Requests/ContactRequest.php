@@ -13,6 +13,8 @@ class ContactRequest extends FormRequest
 
     public const EVENT_SERVICES = ['coffee-break', 'catering'];
 
+    public const PEOPLE_RANGES = ['1-25', '26-50', '51-100', '101-250', '251-500', '501-1000', '1000+'];
+
     public function authorize(): bool
     {
         return true;
@@ -29,7 +31,7 @@ class ContactRequest extends FormRequest
             'phone' => 'required|string|max:50',
             'email' => 'required|email|max:255',
             'service' => ['required', Rule::in(self::SERVICES)],
-            'people' => 'required|integer|min:1|max:100000',
+            'people' => ['required', Rule::in(self::PEOPLE_RANGES)],
             'shifts' => 'required_if:service,comedor|nullable|string|max:500',
             'location' => 'required|string|max:255',
             'kitchen' => ['nullable', Rule::in(self::KITCHEN_OPTIONS)],

@@ -64,7 +64,7 @@
                 @foreach (__('industrial_dining.includes.items') as $item)
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="landing-card">
-                            <h3>{{ $item['title'] }}</h3>
+                            <h3 style="color: #242424;">{{ $item['title'] }}</h3>
                             <p>{{ $item['text'] }}</p>
                         </div>
                     </div>

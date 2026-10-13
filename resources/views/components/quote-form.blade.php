@@ -9,7 +9,7 @@
 @endphp
 <section id="contact" class="cs s-py-90 s-py-xl-90">
     <div class="contactForm">
-        <div class="coverPicture" style="background-image: url('{{ asset($image) }}')">
+        <div class="coverPicture" style="background-image: url('{{ asset($image) }}');">
         </div>
         <div class="form">
             @if (session('success'))
@@ -71,7 +71,12 @@
                     </div>
                     <div class="col-md-6">
                         <label for="quote-people">{{ __('website.quote.fields.people') }} *</label>
-                        <input type="number" id="quote-people" name="people" value="{{ old('people') }}" min="1" step="1" inputmode="numeric" @class(['form-control', 'is-invalid' => $errors->has('people')]) required>
+                        <select id="quote-people" name="people" @class(['form-control', 'is-invalid' => $errors->has('people')]) required>
+                            <option value="" @selected(! old('people')) disabled>{{ __('website.quote.placeholders.people') }}</option>
+                            @foreach (\App\Http\Requests\ContactRequest::PEOPLE_RANGES as $range)
+                                <option value="{{ $range }}" @selected(old('people') === $range)>{{ __("website.quote.people_options.{$range}") }}</option>
+                            @endforeach
+                        </select>
                         @error('people')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
                 </div>

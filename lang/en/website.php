@@ -126,6 +126,7 @@ return [
         ],
         'placeholders' => [
             'service' => 'Select a service',
+            'people' => 'Select a range',
             'shifts' => 'E.g. 2 shifts: 6:00 to 14:00 and 14:00 to 22:00',
             'location' => 'Neighborhood or industrial park',
             'kitchen' => 'Select an option',
@@ -136,6 +137,15 @@ return [
             'coffee-break' => 'Coffee break',
             'catering' => 'Corporate catering',
             'otro' => 'Other',
+        ],
+        'people_options' => [
+            '1-25' => '1 to 25 people',
+            '26-50' => '26 to 50 people',
+            '51-100' => '51 to 100 people',
+            '101-250' => '101 to 250 people',
+            '251-500' => '251 to 500 people',
+            '501-1000' => '501 to 1,000 people',
+            '1000+' => 'More than 1,000 people',
         ],
         'kitchen_options' => [
             'si' => 'Yes',

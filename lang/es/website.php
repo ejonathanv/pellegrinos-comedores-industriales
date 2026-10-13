@@ -126,6 +126,7 @@ return [
         ],
         'placeholders' => [
             'service' => 'Selecciona un servicio',
+            'people' => 'Selecciona un rango',
             'shifts' => 'Ej. 2 turnos: 6:00 a 14:00 y 14:00 a 22:00',
             'location' => 'Colonia o parque industrial',
             'kitchen' => 'Selecciona una opción',
@@ -136,6 +137,15 @@ return [
             'coffee-break' => 'Coffee break',
             'catering' => 'Catering corporativo',
             'otro' => 'Otro',
+        ],
+        'people_options' => [
+            '1-25' => '1 a 25 personas',
+            '26-50' => '26 a 50 personas',
+            '51-100' => '51 a 100 personas',
+            '101-250' => '101 a 250 personas',
+            '251-500' => '251 a 500 personas',
+            '501-1000' => '501 a 1,000 personas',
+            '1000+' => 'Más de 1,000 personas',
         ],
         'kitchen_options' => [
             'si' => 'Sí',

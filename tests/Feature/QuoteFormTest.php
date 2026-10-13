@@ -28,7 +28,7 @@ class QuoteFormTest extends TestCase
             'phone' => '6641234567',
             'email' => 'ana@example.com',
             'service' => 'comedor',
-            'people' => 250,
+            'people' => '101-250',
             'shifts' => '2 turnos',
             'location' => 'Parque Industrial El Florido',
             'kitchen' => 'si',
@@ -82,7 +82,7 @@ class QuoteFormTest extends TestCase
         Mail::assertSent(NewContactMail::class, function (NewContactMail $mail) {
             $mail->assertSeeInHtml('Planta Ejemplo');
             $mail->assertSeeInHtml('Comedor industrial');
-            $mail->assertSeeInHtml('250');
+            $mail->assertSeeInHtml('101 a 250 personas');
             $mail->assertSeeInHtml('2 turnos');
             $mail->assertSeeInHtml('Parque Industrial El Florido');
             $mail->assertSeeInHtml('http://localhost/comedores-industriales-tijuana');

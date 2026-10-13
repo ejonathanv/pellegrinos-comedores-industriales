@@ -6,7 +6,7 @@
         $labels['phone'] => $lead['phone'],
         $labels['email'] => $lead['email'],
         $labels['service'] => __('website.quote.services.' . $lead['service'], [], 'es'),
-        $labels['people'] => $lead['people'],
+        $labels['people'] => __('website.quote.people_options.' . $lead['people'], [], 'es'),
         $labels['shifts'] => $lead['shifts'] ?? null,
         $labels['location'] => $lead['location'],
         $labels['kitchen'] => isset($lead['kitchen']) ? __('website.quote.kitchen_options.' . $lead['kitchen'], [], 'es') : null,
