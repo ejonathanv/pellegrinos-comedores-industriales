@@ -29,11 +29,16 @@ class WebsiteController extends Controller
             ->put('locale', app()->getLocale())
             ->all();
 
-        // Correo de agradecimiento para quien solicita la cotización
-        Mail::to($lead['email'])->send(new ContactMail($lead));
-
         // Aviso al equipo comercial con los datos de la solicitud
         Mail::to(config('mail.contact_address'))->send(new NewContactMail($lead));
+
+        // Pausa entre envíos para SMTP con límite por segundo (p. ej. Mailtrap en pruebas)
+        if ($delay = (int) config('mail.send_delay')) {
+            sleep($delay);
+        }
+
+        // Correo de agradecimiento para quien solicita la cotización
+        Mail::to($lead['email'])->send(new ContactMail($lead));
 
         return redirect(Seo::url($lead['source_page']) . '#contact')
             ->with('success', __('website.quote.success'))

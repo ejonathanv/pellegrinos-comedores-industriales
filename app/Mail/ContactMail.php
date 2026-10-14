@@ -33,6 +33,7 @@ class ContactMail extends Mailable
     {
         return new Content(
             markdown: 'mails.contact-mail',
+            with: ['locale' => $this->locale],
         );
     }
 

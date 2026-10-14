@@ -90,7 +90,12 @@ class QuoteFormTest extends TestCase
             return $mail->hasTo('ventas@example.com') && $mail->hasReplyTo('ana@example.com');
         });
 
-        Mail::assertSent(ContactMail::class, fn (ContactMail $mail) => $mail->hasTo('ana@example.com') && $mail->locale === 'es');
+        Mail::assertSent(ContactMail::class, function (ContactMail $mail) {
+            $mail->assertSeeInHtml('Hola Ana López');
+            $mail->assertSeeInHtml('Comedor industrial');
+
+            return $mail->hasTo('ana@example.com') && $mail->locale === 'es';
+        });
     }
 
     public function test_generate_lead_event_includes_service(): void

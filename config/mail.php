@@ -103,4 +103,7 @@ return [
     // Buzón del equipo comercial que recibe las solicitudes de cotización.
     'contact_address' => env('MAIL_CONTACT_ADDRESS', env('MAIL_FROM_ADDRESS')),
 
+    // Segundos de espera entre el correo al equipo y la confirmación al cliente.
+    'send_delay' => (int) env('MAIL_SEND_DELAY', 0),
+
 ];

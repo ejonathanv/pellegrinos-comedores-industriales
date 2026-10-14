@@ -19780,6 +19780,11 @@ img.absolute_image {
 	display: none;
 }
 
+.top-nav .sf-menu > li.nav-quote > a.nav-quote-btn:hover,
+.top-nav .sf-menu > li.nav-quote > a.nav-quote-btn:focus {
+	color: #ffffff;
+}
+
 @media (max-width: 1199px) {
 	.top-nav .sf-menu > li.nav-quote > a.nav-quote-btn {
 		display: inline-block;
