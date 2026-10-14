@@ -19960,6 +19960,27 @@ img.absolute_image {
 	}
 }
 
+/* Páginas de error */
+.error-hero {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.error-hero .error-code {
+	font-size: 120px;
+	font-weight: 700;
+	line-height: 1;
+	color: #38b5fe;
+	margin: 0 0 0.2em;
+}
+
+@media (max-width: 767px) {
+	.error-hero .error-code {
+		font-size: 80px;
+	}
+}
+
 /* Secciones de landing */
 .landing-section h2 {
 	font-size: 40px;

@@ -151,4 +151,21 @@ class SeoTest extends TestCase
 
         $this->get('/')->assertSee('<meta name="google-site-verification" content="token-de-prueba">', false);
     }
+
+    public function test_not_found_page_uses_site_layout_in_the_requested_language(): void
+    {
+        $this->get('/no-existe')
+            ->assertNotFound()
+            ->assertSee('<html lang="es-MX">', false)
+            ->assertSee('<meta name="robots" content="noindex">', false)
+            ->assertSee('<h1>Página no encontrada</h1>', false)
+            ->assertSee('href="http://localhost/"', false)
+            ->assertDontSee('rel="canonical"', false);
+
+        $this->get('/en/not-found')
+            ->assertNotFound()
+            ->assertSee('<html lang="en">', false)
+            ->assertSee('<h1>Page not found</h1>', false)
+            ->assertSee('href="http://localhost/en"', false);
+    }
 }

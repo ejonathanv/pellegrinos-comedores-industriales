@@ -3,8 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	@if ($errorTitle)
+	<title>{{ $errorTitle }} | {{ config('business.name') }}</title>
+	<meta name="robots" content="noindex">
+	@else
 	<x-seo-head />
 	<x-json-ld-business />
+	@endif
 
 	<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/favicon/apple-icon-57x57.png') }}">
 	<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img/favicon/apple-icon-60x60.png') }}">
@@ -24,7 +29,7 @@
 	<meta name="msapplication-TileImage" content="{{ asset('img/favicon/ms-icon-144x144.png') }}">
 	<meta name="theme-color" content="#ffffff">
 
-	@if (\App\Support\Seo::currentPage() === 'home')
+	@if (! $errorTitle && \App\Support\Seo::currentPage() === 'home')
 	<link rel="preload" as="image" href="{{ asset('img/portadas/slide1.webp') }}" fetchpriority="high">
 	@endif
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
