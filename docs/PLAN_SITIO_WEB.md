@@ -154,8 +154,8 @@ Pasar de una sola página con anclas a URLs por intención de búsqueda. Cada p�
 /                                      Inicio
 /comedores-industriales-tijuana        Página principal de servicio
 /comedor-para-maquiladoras-tijuana     Fase 4
-/catering-corporativo-tijuana          Fase 4
-/coffee-break-empresarial-tijuana      Fase 4
+/catering-corporativo-tijuana          Prototipo (Fase 4)
+/coffee-break-empresarial-tijuana      Prototipo (Fase 4)
 /nosotros-y-certificaciones            Fase 4
 /recursos                              Fase 5
 /contacto                              Cotización
@@ -173,7 +173,7 @@ Cada página existe también en inglés bajo `/en/` (ver la sección Idioma de l
 - [x] Nuevo hero con `h1` "Comedores industriales en Tijuana para empresas", subtítulo y botones **Solicitar cotización** y **Conocer servicios**.
 - [ ] Texto de confianza con enlace **Ver certificaciones** (cuando exista `/nosotros-y-certificaciones`).
 - [x] Franja de confianza debajo del hero: Ciudad Industrial, REPSE, DC3 y manejo higiénico, WhatsApp.
-- [x] Tarjetas de servicio enlazadas: comedor a su landing; coffee break y catering al formulario con el servicio preseleccionado (hasta tener página propia en la Fase 4).
+- [x] Tarjetas de servicio enlazadas a sus landings (comedor, coffee break y catering corporativo).
 
 ### Landing `/comedores-industriales-tijuana`
 
@@ -224,23 +224,21 @@ Título sugerido: *Comedor para maquiladoras en Tijuana | Servicio por turnos*
 
 ### `/catering-corporativo-tijuana`
 
-Título sugerido: *Catering corporativo en Tijuana para empresas y capacitaciones*
+Título: *Catering corporativo en Tijuana para empresas | Pellegrino's*. Prototipo en `lang/es|en/corporate_catering.php` con la misma estructura que comedores industriales; foto de portada compartida por ahora.
 
-- [ ] Modalidades, montaje y alcance.
+- [x] Encabezado, problemas, qué incluye, proceso, FAQ y JSON-LD `Service`.
+- [x] Formulario con "Catering corporativo" preseleccionado y fecha de evento.
 - [ ] Galería propia de eventos.
-- [ ] Preguntas frecuentes.
-- [ ] Formulario con fecha, asistentes y sede.
-- [ ] Llamada a la acción: **Cotizar mi evento**.
+- [ ] Textos e imágenes definitivos (validar con el cliente).
 
 ### `/coffee-break-empresarial-tijuana`
 
-Título sugerido: *Coffee break empresarial en Tijuana | Pellegrino's*
+Título: *Coffee break empresarial en Tijuana | Pellegrino's*. Prototipo en `lang/es|en/coffee_break.php`; foto de portada compartida por ahora.
 
-- [ ] Opciones reales y logística.
-- [ ] Mínimo de personas (si aplica) y tiempos.
+- [x] Encabezado, problemas, qué incluye, proceso, FAQ y JSON-LD `Service`.
+- [x] Formulario con "Coffee break" preseleccionado y fecha de evento.
 - [ ] Imágenes propias.
-- [ ] Formulario corto.
-- [ ] Llamada a la acción: **Solicitar propuesta**.
+- [ ] Textos definitivos y mínimos/tiempos (validar con el cliente).
 
 ### `/nosotros-y-certificaciones`
 

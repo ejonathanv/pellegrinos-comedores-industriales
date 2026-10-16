@@ -48,6 +48,38 @@ return [
             ],
         ],
 
+        'coffee_break' => [
+            'action' => [App\Http\Controllers\WebsiteController::class, 'coffeeBreak'],
+            'changefreq' => 'monthly',
+            'priority' => '0.9',
+            'es' => [
+                'path' => 'coffee-break-empresarial-tijuana',
+                'title' => "Coffee break empresarial en Tijuana | Pellegrino's",
+                'description' => 'Coffee break para empresas en Tijuana: reuniones, capacitaciones y eventos corporativos. Propuesta de menú, montaje y servicio. Cotiza hoy.',
+            ],
+            'en' => [
+                'path' => 'corporate-coffee-break-tijuana',
+                'title' => "Corporate Coffee Break in Tijuana | Pellegrino's",
+                'description' => 'Corporate coffee break service in Tijuana for meetings, training and company events. Menu proposal, setup and service. Get a quote.',
+            ],
+        ],
+
+        'corporate_catering' => [
+            'action' => [App\Http\Controllers\WebsiteController::class, 'corporateCatering'],
+            'changefreq' => 'monthly',
+            'priority' => '0.9',
+            'es' => [
+                'path' => 'catering-corporativo-tijuana',
+                'title' => "Catering corporativo en Tijuana para empresas | Pellegrino's",
+                'description' => 'Catering corporativo en Tijuana para eventos de empresa: propuesta de menú, preparación, servicio y limpieza. REPSE y personal capacitado. Cotiza hoy.',
+            ],
+            'en' => [
+                'path' => 'corporate-catering-tijuana',
+                'title' => "Corporate Catering in Tijuana for Companies | Pellegrino's",
+                'description' => 'Corporate catering in Tijuana for company events: menu proposal, preparation, service and cleanup. REPSE registered, trained staff. Get a quote.',
+            ],
+        ],
+
         'contact' => [
             'action' => [App\Http\Controllers\WebsiteController::class, 'contact'],
             'changefreq' => 'yearly',

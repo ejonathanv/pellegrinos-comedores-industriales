@@ -4,6 +4,8 @@ return [
     'nav' => [
         'home' => 'Inicio',
         'industrial_dining' => 'Comedores industriales',
+        'coffee_break' => 'Coffee break',
+        'corporate_catering' => 'Catering corporativo',
         'about' => 'Nosotros',
         'services' => 'Servicios',
         'gallery' => 'Galería',

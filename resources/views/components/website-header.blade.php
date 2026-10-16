@@ -3,24 +3,24 @@
     $alternateLocale = $seo::alternateLocale();
     $currentPage = $seo::currentPage();
     $homeUrl = $seo::url('home');
-
     $contactUrl = $seo::url('contact');
+    $servicePages = ['industrial_dining', 'coffee_break', 'corporate_catering'];
 
     $navItems = [
         ['label' => __('website.nav.home'), 'url' => $homeUrl, 'active' => $currentPage === 'home'],
         [
             'label' => __('website.nav.services'),
             'url' => $homeUrl . '#services',
-            'active' => $currentPage === 'industrial_dining',
+            'active' => in_array($currentPage, $servicePages, true),
             'children' => [
                 ['label' => __('website.nav.industrial_dining'), 'url' => $seo::url('industrial_dining'), 'active' => $currentPage === 'industrial_dining'],
-                ['label' => __('website.quote.services.coffee-break'), 'url' => $contactUrl . '?servicio=coffee-break#contact', 'active' => false],
-                ['label' => __('website.quote.services.catering'), 'url' => $contactUrl . '?servicio=catering#contact', 'active' => false],
+                ['label' => __('website.nav.coffee_break'), 'url' => $seo::url('coffee_break'), 'active' => $currentPage === 'coffee_break'],
+                ['label' => __('website.nav.corporate_catering'), 'url' => $seo::url('corporate_catering'), 'active' => $currentPage === 'corporate_catering'],
             ],
         ],
         ['label' => __('website.nav.about'), 'url' => $homeUrl . '#about', 'active' => false],
         ['label' => __('website.nav.clients'), 'url' => $homeUrl . '#clients', 'active' => false],
-        ['label' => __('website.nav.contact'), 'url' => $seo::url('contact'), 'active' => $currentPage === 'contact'],
+        ['label' => __('website.nav.contact'), 'url' => $contactUrl, 'active' => $currentPage === 'contact'],
     ];
 @endphp
 <div class="header_absolute ds cover-background ">

@@ -18,6 +18,14 @@ class WebsiteController extends Controller
         return view('website.industrial-dining');
     }
 
+    public function coffeeBreak(){
+        return view('website.coffee-break');
+    }
+
+    public function corporateCatering(){
+        return view('website.corporate-catering');
+    }
+
     public function contact(){
         return view('website.contact');
     }

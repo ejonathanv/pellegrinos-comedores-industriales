@@ -94,6 +94,10 @@ class SeoTest extends TestCase
         $pages = [
             '/comedores-industriales-tijuana' => ['es-MX', 'http://localhost/en/industrial-dining-tijuana'],
             '/en/industrial-dining-tijuana' => ['en', 'http://localhost/comedores-industriales-tijuana'],
+            '/coffee-break-empresarial-tijuana' => ['es-MX', 'http://localhost/en/corporate-coffee-break-tijuana'],
+            '/en/corporate-coffee-break-tijuana' => ['en', 'http://localhost/coffee-break-empresarial-tijuana'],
+            '/catering-corporativo-tijuana' => ['es-MX', 'http://localhost/en/corporate-catering-tijuana'],
+            '/en/corporate-catering-tijuana' => ['en', 'http://localhost/catering-corporativo-tijuana'],
             '/contacto' => ['es-MX', 'http://localhost/en/contact'],
             '/en/contact' => ['en', 'http://localhost/contacto'],
         ];
@@ -113,11 +117,18 @@ class SeoTest extends TestCase
     {
         $this->get('/')
             ->assertSee('href="http://localhost/comedores-industriales-tijuana"', false)
+            ->assertSee('href="http://localhost/coffee-break-empresarial-tijuana"', false)
+            ->assertSee('href="http://localhost/catering-corporativo-tijuana"', false)
             ->assertSee('href="http://localhost/contacto"', false)
             ->assertSee('href="http://localhost/#about"', false);
 
-        $this->get('/comedores-industriales-tijuana')
-            ->assertSee('aria-current="page"', false);
+        foreach ([
+            '/comedores-industriales-tijuana',
+            '/coffee-break-empresarial-tijuana',
+            '/catering-corporativo-tijuana',
+        ] as $path) {
+            $this->get($path)->assertSee('aria-current="page"', false);
+        }
     }
 
     public function test_sitemap_lists_new_pages(): void
@@ -125,6 +136,10 @@ class SeoTest extends TestCase
         $this->get('/sitemap.xml')
             ->assertSee('<loc>http://localhost/comedores-industriales-tijuana</loc>', false)
             ->assertSee('<loc>http://localhost/en/industrial-dining-tijuana</loc>', false)
+            ->assertSee('<loc>http://localhost/coffee-break-empresarial-tijuana</loc>', false)
+            ->assertSee('<loc>http://localhost/en/corporate-coffee-break-tijuana</loc>', false)
+            ->assertSee('<loc>http://localhost/catering-corporativo-tijuana</loc>', false)
+            ->assertSee('<loc>http://localhost/en/corporate-catering-tijuana</loc>', false)
             ->assertSee('<loc>http://localhost/contacto</loc>', false)
             ->assertSee('<loc>http://localhost/en/contact</loc>', false);
     }
@@ -137,6 +152,21 @@ class SeoTest extends TestCase
             ->assertSee('"@type":"FAQPage"', false)
             ->assertSee('"@type":"BreadcrumbList"', false)
             ->assertSee('<option value="comedor" selected', false);
+    }
+
+    public function test_coffee_break_and_catering_pages_include_structured_data(): void
+    {
+        $this->get('/coffee-break-empresarial-tijuana')
+            ->assertSee('"@type":"Service"', false)
+            ->assertSee('"@type":"FAQPage"', false)
+            ->assertSee('"@type":"BreadcrumbList"', false)
+            ->assertSee('<option value="coffee-break" selected', false);
+
+        $this->get('/catering-corporativo-tijuana')
+            ->assertSee('"@type":"Service"', false)
+            ->assertSee('"@type":"FAQPage"', false)
+            ->assertSee('"@type":"BreadcrumbList"', false)
+            ->assertSee('<option value="catering" selected', false);
     }
 
     public function test_service_query_preselects_the_quote_form(): void

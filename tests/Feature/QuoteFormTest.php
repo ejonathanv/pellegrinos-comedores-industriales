@@ -71,6 +71,26 @@ class QuoteFormTest extends TestCase
             ->assertRedirect('http://localhost/comedores-industriales-tijuana#contact')
             ->assertSessionHas('lead_submitted', ['service' => 'comedor', 'source_page' => 'industrial_dining']);
 
+        $this->post('/contact-to-pellegrinos', $this->payload([
+            'service' => 'coffee-break',
+            'shifts' => '',
+            'event_date' => now()->addWeek()->toDateString(),
+            'source_page' => 'coffee_break',
+        ]))
+            ->assertSessionHasNoErrors()
+            ->assertRedirect('http://localhost/coffee-break-empresarial-tijuana#contact')
+            ->assertSessionHas('lead_submitted', ['service' => 'coffee-break', 'source_page' => 'coffee_break']);
+
+        $this->post('/contact-to-pellegrinos', $this->payload([
+            'service' => 'catering',
+            'shifts' => '',
+            'event_date' => now()->addWeek()->toDateString(),
+            'source_page' => 'corporate_catering',
+        ]))
+            ->assertSessionHasNoErrors()
+            ->assertRedirect('http://localhost/catering-corporativo-tijuana#contact')
+            ->assertSessionHas('lead_submitted', ['service' => 'catering', 'source_page' => 'corporate_catering']);
+
         $this->post('/contact-to-pellegrinos', $this->payload(['locale' => 'en', 'source_page' => 'contact']))
             ->assertRedirect('http://localhost/en/contact#contact');
     }

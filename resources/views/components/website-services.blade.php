@@ -1,6 +1,5 @@
 @php
     $seo = \App\Support\Seo::class;
-    $contactUrl = $seo::url('contact');
 
     $services = [
         [
@@ -12,14 +11,14 @@
         [
             'key' => 'serviceTwo',
             'image' => 'images/img_5.webp',
-            'url' => $contactUrl . '?servicio=coffee-break#contact',
-            'cta' => __('website.services.cta_quote'),
+            'url' => $seo::url('coffee_break'),
+            'cta' => __('website.services.cta_more'),
         ],
         [
             'key' => 'serviceThree',
             'image' => 'images/img_4.webp',
-            'url' => $contactUrl . '?servicio=catering#contact',
-            'cta' => __('website.services.cta_quote'),
+            'url' => $seo::url('corporate_catering'),
+            'cta' => __('website.services.cta_more'),
         ],
     ];
 @endphp
