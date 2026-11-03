@@ -3,11 +3,7 @@
         <div class="row" style="display:flex; align-items:start; justify-content: center">
             <div class="col-xl-4 col-lg-3 text-center text-lg-left animate" data-animation="fadeInUp">
                 <div class="widget widget_text">
-                    @if ($image)
-                        <img src="{{ asset($image) }}" alt="{{ config('business.name') }}" width="1600" height="901" loading="lazy" class="img-fluid" style="width: 100%; height: auto;">
-                    @else
-                        <img src="{{ asset('img/pellegrinos_comedores_industriales_logo.svg') }}" alt="{{ config('business.name') }}" width="300" height="212" loading="lazy" style="width: 300px; height: auto;">
-                    @endif
+                    <img src="{{ asset('img/pellegrinos_comedores_industriales_logo.svg') }}" alt="{{ config('business.name') }}" width="300" height="212" loading="lazy" style="width: 300px; height: auto;">
                 </div>
                 <div class="divider-60 divider-lg-0"></div>
             </div>
