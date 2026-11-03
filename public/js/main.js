@@ -968,7 +968,7 @@ function windowLoadInit() {
 				directionNav: nav,
 				prevText: "",
 				nextText: "",
-				smoothHeight: false,
+				smoothHeight: true,
 				slideshowSpeed:speed,
 				animationSpeed:600,
 				start: function( slider ) {
