@@ -10,13 +10,13 @@
         ],
         [
             'key' => 'serviceTwo',
-            'image' => 'images/img_5.webp',
+            'image' => 'img/coffee-break/coffee-break-intro.webp',
             'url' => $seo::url('coffee_break'),
             'cta' => __('website.services.cta_more'),
         ],
         [
             'key' => 'serviceThree',
-            'image' => 'images/img_4.webp',
+            'image' => 'img/catering/catering-intro.webp',
             'url' => $seo::url('corporate_catering'),
             'cta' => __('website.services.cta_more'),
         ],
@@ -51,10 +51,8 @@
                 <div class="quote-carousel owl-carousel" data-margin="60" data-responsive-xl="2" data-responsive-ml="2" data-responsive-lg="2" data-responsive-md="1" data-responsive-sm="2" data-responsive-xs="1" data-dots="false" data-loop="true" data-autoplay="true">
                     @foreach ($services as $service)
                     <div class="vertical-item service-layout-1 ls">
-                        <div class="item-media">
-                            <a href="{{ $service['url'] }}" tabindex="-1">
-                                <img src="{{ asset($service['image']) }}" alt="{{ __("website.services.{$service['key']}.title") }}" width="800" height="600" loading="lazy">
-                            </a>
+                        <div class="item-media service-card-media" style="background-image: url('{{ asset($service['image']) }}');">
+                            <a href="{{ $service['url'] }}" tabindex="-1" aria-label="{{ __("website.services.{$service['key']}.title") }}"></a>
                         </div>
                         <div class="item-content">
                             <div class="item-content-wrap">

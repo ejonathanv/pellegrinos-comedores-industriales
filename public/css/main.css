@@ -19989,6 +19989,20 @@ img.absolute_image {
 	margin-top: 10px;
 }
 
+.service-layout-1 .service-card-media {
+	height: 280px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.service-layout-1 .service-card-media a {
+	position: absolute;
+	inset: 0;
+	display: block;
+}
+
 @media (max-width: 992px) {
 	#services .section-heading {
 		font-size: 2.3rem;
@@ -19996,6 +20010,10 @@ img.absolute_image {
 
 	.service-card-title {
 		font-size: 1.5rem;
+	}
+
+	.service-layout-1 .service-card-media {
+		height: 220px;
 	}
 }
 
