@@ -19615,6 +19615,12 @@ img.absolute_image {
 	align-self: center;
 }
 
+@media screen and (max-width: 991px) {
+	.contactForm .coverPicture{
+		background-attachment: scroll;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.social-media-icons.clients a.client1 img{
 		width: 70px;
@@ -19944,6 +19950,15 @@ img.absolute_image {
 	background: transparent;
 	margin: 1.5rem 0 0;
 	padding: 0;
+}
+
+@media (max-width: 991px) {
+	.page-hero,
+	.page-hero.s-parallax {
+		background-attachment: scroll;
+		background-size: cover;
+		background-position: center;
+	}
 }
 
 @media (max-width: 767px) {
