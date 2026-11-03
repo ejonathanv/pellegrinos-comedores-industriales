@@ -1,6 +1,7 @@
 @php
     $seo = \App\Support\Seo::class;
     $business = config('business');
+    $heroImage = 'img/coffee-break/coffee-break-hero.webp';
 
     $serviceSchema = [
         '@type' => 'Service',
@@ -16,13 +17,13 @@
         'areaServed' => ['@type' => 'City', 'name' => $business['area_served']],
     ];
 @endphp
-<x-website-layout>
+<x-website-layout :footer-image="$heroImage">
 
     <x-page-hero
         :title="__('coffee_break.hero.title')"
         :subtitle="__('coffee_break.hero.subtitle')"
         :breadcrumb="__('coffee_break.breadcrumb')"
-        image="img/portadas/comedor-industrial-hero.webp">
+        :image="$heroImage">
         <a href="#contact" class="btn btn-maincolor">{{ __('coffee_break.hero.cta') }}</a>
     </x-page-hero>
 
@@ -36,7 +37,7 @@
                     <p class="fs-20">{{ __('coffee_break.intro.text') }}</p>
                 </div>
                 <div class="col-lg-6">
-                    <img src="{{ asset('images/img_5.webp') }}" alt="{{ __('website.services.serviceTwo.title') }}" width="800" height="600" loading="lazy" class="img-fluid">
+                    <img src="{{ asset('img/coffee-break/coffee-break-intro.webp') }}" alt="{{ __('website.services.serviceTwo.title') }}" width="1600" height="901" loading="lazy" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -78,7 +79,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img src="{{ asset('img/galeria/comidas/slides/slide2.webp') }}" alt="{{ __('website.galleries.one.title') }}" width="1200" height="676" loading="lazy" class="img-fluid">
+                    <img src="{{ asset('img/coffee-break/coffee-break-process.webp') }}" alt="{{ __('coffee_break.process.title') }}" width="1600" height="901" loading="lazy" class="img-fluid">
                 </div>
                 <div class="col-lg-7">
                     <h2 class="color-darkgrey">{{ __('coffee_break.process.title') }}</h2>
@@ -97,7 +98,7 @@
 
     <x-faq :title="__('coffee_break.faq.title')" :items="__('coffee_break.faq.items')" />
 
-    <x-quote-form service="coffee-break" />
+    <x-quote-form service="coffee-break" :image="$heroImage" />
 
     <x-json-ld :schema="$serviceSchema" />
 

@@ -1,6 +1,8 @@
 @php
     $seo = \App\Support\Seo::class;
     $business = config('business');
+    $heroImage = 'img/portadas/comedor-industrial-hero.webp';
+    $footerImage = 'img/portadas/contacto.webp';
 
     $serviceSchema = [
         '@type' => 'Service',
@@ -16,13 +18,13 @@
         'areaServed' => ['@type' => 'City', 'name' => $business['area_served']],
     ];
 @endphp
-<x-website-layout>
+<x-website-layout :footer-image="$footerImage">
 
     <x-page-hero
         :title="__('industrial_dining.hero.title')"
         :subtitle="__('industrial_dining.hero.subtitle')"
         :breadcrumb="__('industrial_dining.breadcrumb')"
-        image="img/portadas/comedor-industrial-hero.webp">
+        :image="$heroImage">
         <a href="#contact" class="btn btn-maincolor">{{ __('industrial_dining.hero.cta') }}</a>
     </x-page-hero>
 
@@ -97,7 +99,7 @@
 
     <x-faq :title="__('industrial_dining.faq.title')" :items="__('industrial_dining.faq.items')" />
 
-    <x-quote-form service="comedor" />
+    <x-quote-form service="comedor" :image="$footerImage" />
 
     <x-json-ld :schema="$serviceSchema" />
 

@@ -50,7 +50,7 @@
 		<div id="box_wrapper">
 			<x-website-header />
 			{{ $slot }}
-			<x-website-footer />
+			<x-website-footer :image="$footerImage" />
 		</div>
 	</div>
 	<a href="{{ config('business.social.whatsapp') }}" class="whatsapp-float" target="_blank" rel="noopener" data-track="click_whatsapp">

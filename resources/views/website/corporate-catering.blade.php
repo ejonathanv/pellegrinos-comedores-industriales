@@ -1,6 +1,7 @@
 @php
     $seo = \App\Support\Seo::class;
     $business = config('business');
+    $heroImage = 'img/catering/catering-hero.webp';
 
     $serviceSchema = [
         '@type' => 'Service',
@@ -16,13 +17,13 @@
         'areaServed' => ['@type' => 'City', 'name' => $business['area_served']],
     ];
 @endphp
-<x-website-layout>
+<x-website-layout :footer-image="$heroImage">
 
     <x-page-hero
         :title="__('corporate_catering.hero.title')"
         :subtitle="__('corporate_catering.hero.subtitle')"
         :breadcrumb="__('corporate_catering.breadcrumb')"
-        image="img/portadas/comedor-industrial-hero.webp">
+        :image="$heroImage">
         <a href="#contact" class="btn btn-maincolor">{{ __('corporate_catering.hero.cta') }}</a>
     </x-page-hero>
 
@@ -36,7 +37,7 @@
                     <p class="fs-20">{{ __('corporate_catering.intro.text') }}</p>
                 </div>
                 <div class="col-lg-6">
-                    <img src="{{ asset('images/img_4.webp') }}" alt="{{ __('website.services.serviceThree.title') }}" width="800" height="600" loading="lazy" class="img-fluid">
+                    <img src="{{ asset('img/catering/catering-intro.webp') }}" alt="{{ __('website.services.serviceThree.title') }}" width="1600" height="901" loading="lazy" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -78,7 +79,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img src="{{ asset('img/galeria/comidas/slides/slide2.webp') }}" alt="{{ __('website.galleries.one.title') }}" width="1200" height="676" loading="lazy" class="img-fluid">
+                    <img src="{{ asset('img/catering/catering-process.webp') }}" alt="{{ __('corporate_catering.process.title') }}" width="1600" height="901" loading="lazy" class="img-fluid">
                 </div>
                 <div class="col-lg-7">
                     <h2 class="color-darkgrey">{{ __('corporate_catering.process.title') }}</h2>
@@ -97,7 +98,7 @@
 
     <x-faq :title="__('corporate_catering.faq.title')" :items="__('corporate_catering.faq.items')" />
 
-    <x-quote-form service="catering" />
+    <x-quote-form service="catering" :image="$heroImage" />
 
     <x-json-ld :schema="$serviceSchema" />
 

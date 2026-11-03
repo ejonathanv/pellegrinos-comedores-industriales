@@ -1,14 +1,14 @@
 @php
-    $business = config('business');
+    $heroImage = 'img/portadas/comedor-industrial-hero.webp';
 @endphp
-<x-website-layout>
+<x-website-layout :footer-image="$heroImage">
 
     <x-page-hero
         :title="__('website.contact_page.title')"
         :subtitle="__('website.contact_page.intro')"
         :breadcrumb="__('website.nav.contact')"
-        image="img/portadas/comedor-industrial-hero.webp" />
+        :image="$heroImage" />
 
-    <x-quote-form />
+    <x-quote-form :image="$heroImage" />
 
 </x-website-layout>

@@ -11,8 +11,10 @@ class WebsiteLayout extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public ?string $errorTitle = null)
-    {
+    public function __construct(
+        public ?string $errorTitle = null,
+        public ?string $footerImage = null,
+    ) {
         //
     }
 
